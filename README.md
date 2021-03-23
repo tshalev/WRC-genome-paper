@@ -1,2 +1,2 @@
 # WRC-genome-paper
-RElevant scripts and data files for western redcedar genome paper
+Relevant scripts and data files for western redcedar genome paper
