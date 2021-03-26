@@ -1,8 +1,8 @@
 # Scripts
-### [geographic_maps.R](https://github.com/tshalev/WRC-genome-paper/blob/main/Scripts/geographic_maps.R)
+## [geographic_maps.R](https://github.com/tshalev/WRC-genome-paper/blob/main/Scripts/geographic_maps.R)
 Geographic maps used in Figure 1
 
-### [genetic_differentiation.R](https://github.com/tshalev/WRC-genome-paper/blob/main/Scripts/genetic_differentiation.R)
+## [genetic_differentiation.R](https://github.com/tshalev/WRC-genome-paper/blob/main/Scripts/genetic_differentiation.R)
 Fst analysis, DAPC, AMOVA, PCA plots used in Figure 2
 
 ### [PopGenome_analysis.R](https://github.com/tshalev/WRC-genome-paper/blob/main/Scripts/PopGenome_analysis.R)
