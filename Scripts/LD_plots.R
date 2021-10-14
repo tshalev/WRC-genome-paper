@@ -3,7 +3,6 @@ rm(list=ls())
 # load libraries
 library(tidyverse)
 
-setwd("~/UBC/GSAT/PhD/WRC/GS/wrc/snps/S_lines/filtering_for_pop_gen/pop_gen_v3_snps_43929_snps/")
 source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
 library(extrafont)
 
@@ -18,6 +17,7 @@ library(extrafont)
 #' @param minr2 A value between 0 and 1. All SNPs with R2 value below this 
 #' value is excluded from plot.
 #' 
+#' #' Adapted from BioStars forum user rmf
 plotPairwiseLD <- function(dfr,chr,xlim=c(NA,NA),ylim=c(NA,NA),minr2) {
   if(missing(dfr)) stop("Input data.frame 'dfr' missing.")
   
@@ -71,6 +71,7 @@ plotPairwiseLD <- function(dfr,chr,xlim=c(NA,NA),ylim=c(NA,NA),minr2) {
 #' @param minr2 A value between 0 and 1. All SNPs with R2 value below this 
 #' value is excluded from plot.
 #' 
+#' Adapted from BioStars forum user rmf
 plotDecayLD <- function(dfr,chr,xlim=c(NA,NA),ylim=c(NA,NA),avgwin=0,minr2) {
   if(missing(dfr)) stop("Input data.frame 'dfr' missing.")
   
@@ -99,7 +100,7 @@ plotDecayLD <- function(dfr,chr,xlim=c(NA,NA),ylim=c(NA,NA),avgwin=0,minr2) {
     # geom_path(data = ld.df_05, aes(x = distance, y = fpoints), colour = "#0072B5FF", size= 0.9) +
     # geom_path(data = ld.df_1, aes(x = distance, y = fpoints), colour = "#E18727FF", size= 0.9) +
     geom_hline(yintercept = 0.2, linetype = "dashed", color = "#7876B1FF") +
-    geom_hline(yintercept = 0.1, linetype = "dashed", color ="#6F99ADFF") +
+    geom_hline(yintercept = 0.1, linetype = "dashed", color ="#EE4C97FF") +
     # geom_smooth() +
     scale_x_continuous(limits=xlim, breaks = c(0, 1e06, 2e06, 3e06, 4e06, 5e06, 6e06, 7e06, 8e06, 9e06,
                                                10e06, 11e06, 12e06, 13e06, 14e06, 15e06, 16e06, 17e06),
@@ -113,9 +114,8 @@ plotDecayLD <- function(dfr,chr,xlim=c(NA,NA),ylim=c(NA,NA),avgwin=0,minr2) {
 }
 
 # read file
-# ld <- read.delim("parents_closely_related_removed.ld",sep="\t",comment.char="#")
 
-ld <- read.table("diverse_pop.g95minmeanDP15maxmeanDP60minQ30AB28.maf03ld.ld", header = T)
+ld <- read.table("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB28.HWE_het.maf05.ld", header = T)
 ld$CHR_A <- factor(ld$CHR_A)
 ld$CHR_B <- factor(ld$CHR_B)
 
@@ -131,42 +131,16 @@ fpoints<-((10+new.rho*distance)/((2+new.rho*distance)*(11+new.rho*distance)))*(1
 ld.df<-data.frame(distance, fpoints)
 ld.df<-ld.df[order(ld.df$distance),]
 
-# ld.df_05<-data.frame(distance, fpoints)
-# ld.df_05<-ld.df_05[order(ld.df_05$distance),]
-# 
-# ld.df_1<-data.frame(distance, fpoints)
-# ld.df_1<-ld.df_1[order(ld.df_1$distance),]
+## Plots for Figure 2
+pairwise_LD <- plotPairwiseLD(ld, minr2 = 0)
+ggsave("parents_pairwise_ld_pub_theme2.tiff", pairwise_LD, height = 6, width = 7)
 
+LD_decay <- plotDecayLD(ld, avgwin = 10)
+ggsave("parents_ld_decay_avg_win_10_1_decay_no_grid_pub_theme.tiff", LD_decay, height = 6, width = 7)
 
-## Plots for Figure 3
-(pairwise_LD <- plotPairwiseLD(ld, minr2 = 0))
-ggsave("parents_pairwise_ld_pub_theme2.tiff", pairwise_LD, height = 8, width = 11)
+## LD decay thresholds, half-decay ####
 
-(LD_decay <- plotDecayLD(ld, avgwin = 10))
-ggsave("parents_ld_decay_avg_win_10_1_decay_no_grid_pub_theme.tiff", LD_decay, height = 8, width = 11)
-
-# plot(distance,LD.data,pch=19,cex=1.2)
-# lines(ld.df$distance,ld.df$fpoints,lty=3,lwd=1.2)
-
-# distance<-c(19,49,1981,991,104,131,158,167,30,1000,5000,100,150,11,20,33,1100,1300,1500,100,1400,900,300,100,2000,100,1900,500,600,700,3000,2500,400,792)
-# LD.data<-c(0.6,0.47,0.018,0.8,0.7,0.09,0.09,0.05,0,0.001,0,0.6,0.4,0.2,0.5,0.4,0.1,0.08,0.07,0.5,0.06,0.11,0.3,0.6,0.1,0.9,0.1,0.3,0.29,0.31,0.02,0.01,0.4,0.5)
-# n<-52
-# HW.st<-c(C=0.1)
-# HW.nonlinear<-nls(LD.data~((10+C*distance)/((2+C*distance)*(11+C*distance)))*(1+((3+C*distance)*(12+12*C*distance+(C*distance)^2))/(n*(2+C*distance)*(11+C*distance))),start=HW.st,control=nls.control(maxiter=100))
-# tt<-summary(HW.nonlinear)
-# new.rho<-tt$parameters[1]
-# fpoints<-((10+new.rho*distance)/((2+new.rho*distance)*(11+new.rho*distance)))*(1+((3+new.rho*distance)*(12+12*new.rho*distance+(new.rho*distance)^2))/(n*(2+new.rho*distance)*(11+new.rho*distance)))
-# 
-# ld.df<-data.frame(distance,fpoints)
-# ld.df<-ld.df[order(ld.df$distance),]
-# plot(distance,LD.data,pch=19,cex=0.9)
-# lines(ld.df$distance,ld.df$fpoints,lty=3,lwd=1.2)
-# 
-# write.table(ld.df, "ld_fpoint.txt", col.names = T, row.names = F, quote = F)
-# ld.df <- read.table("ld_fpoint.txt", header = T)
-
-
-summary(ld$R2)
+summary(LD.data)
 filter(ld.df, fpoints < 0.20001 & fpoints > 0.19999)
 filter(ld.df_05, fpoints < 0.20001 & fpoints > 0.19999)
 filter(ld.df_1, fpoints < 0.20001 & fpoints > 0.19999)
@@ -176,8 +150,8 @@ filter(ld.df_05, fpoints < 0.10001 & fpoints > 0.09999)
 filter(ld.df_1, fpoints < 0.10001 & fpoints > 0.09999)
 
 df<-data.frame(distance,fpoints)
-maxld<-max(ld.df$fpoints)
+maxld<-quantile(LD.data, 0.9)
 
 h.decay<-maxld/2
-half.decay.distance<-ld.df$distance[which.min(abs(ld.df$fpoints-h.decay))]
+half.decay.distance<-df$distance[which.min(abs(df$fpoints-h.decay))]
 half.decay.distance
