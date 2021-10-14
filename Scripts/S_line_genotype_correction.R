@@ -7,8 +7,6 @@ library(pheatmap)
 library(tidyverse)
 source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
 
-setwd("~/UBC/GSAT/PhD/WRC/GS/wrc/snps/S_lines/filtering_for_pop_gen/pop_gen_v3_snps_43929_snps/S_lines_pop_gen/")
-
 
 ## Zygosity correction functions #######################################################################################
 zygosity_correction_fun_F_S5 <- function(x){
@@ -627,7 +625,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_7 <- as.matrix(alleles)
 
 t_g.mat_Line_7 <- t(g.mat_Line_7)
-t_g.mat_Line_7 <- cbind(t_g.mat_Line_7, `721-21-S3` = rep(NA, 43929))
+t_g.mat_Line_7 <- cbind(t_g.mat_Line_7, `721-21-S3` = rep(NA, 42530))
 col.order <- c("7_1-F", "712-S1","712-111-S4",
                "7_2-F", "721-S1", "721-2-S2", "721-21-S3","721-211-S4",
                "7_4-F", "745-S1", "745-4-S2", "745-44-S3", "745-444-S4")
@@ -674,7 +672,7 @@ Line_7_2_corrected <- new_7_2_cor %>%
 # Filter Line 7_4
 Line_7_4 <- df_gmat_line_7 %>% 
   rownames_to_column() %>%
-  select(1, 9:13) %>%
+  select(1, 10:14) %>%
   column_to_rownames()
 
 # Correcting Line 7_4
@@ -706,7 +704,7 @@ Line_7_4_corrected <- new_7_4_cor %>%
   filter(!(row.names(new_7_4_cor) %in% row.names(test_7_4))) %>% 
   column_to_rownames()
 
-write.table(Line_7_2_corrected, "corrected_full_lines_noparents/Line_7_2_corrected.txt", quote = F)
+# write.table(Line_7_2_corrected, "corrected_full_lines_noparents/Line_7_2_corrected.txt", quote = F)
 # write.table(Line_7_4_corrected, "corrected_full_lines_noparents/Line_7_4_corrected.txt", quote = F)
 
 # how many heterozygotes
@@ -890,7 +888,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_10 <- as.matrix(alleles)
 
 t_g.mat_Line_10 <- t(g.mat_Line_10)
-t_g.mat_Line_10 <- cbind(t_g.mat_Line_10, `1022-11-S3` = rep(NA, 43929), `1056-45-S3` = rep(NA, 43929))
+t_g.mat_Line_10 <- cbind(t_g.mat_Line_10, `1022-11-S3` = rep(NA, 42530), `1056-45-S3` = rep(NA, 42530))
 
 col.order <- c("10_1-F", "1011-S1", "1011-121-S4",
                "10_2-F", "1022-S1", "1022-1-S2", "1022-11-S3", "1022-113-S4", "1022-113-S5",
@@ -1037,7 +1035,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_13 <- as.matrix(alleles)
 
 t_g.mat_Line_13 <- t(g.mat_Line_13)
-t_g.mat_Line_13 <- cbind(t_g.mat_Line_13, `1332-11-S3` = rep(NA, 43929))
+t_g.mat_Line_13 <- cbind(t_g.mat_Line_13, `1332-11-S3` = rep(NA, 42530))
 
 col.order <- c("13_2-F", "1323-S1", "1323-211-S4", 
                "13_3-F", "1332-S1", "1332-1-S2", "1332-11-S3", "1332-111-S4",
@@ -1089,7 +1087,7 @@ Line_13_3_corrected <- new_13_3_cor %>%
 # Filtering Line 13_4
 Line_13_4 <- df_gmat_Line_13 %>% 
   rownames_to_column() %>%
-  select(1, 9:13) %>% 
+  select(1, 10:14) %>% 
   #filter(`1_1-F` == 1, `111-221-S5` == 1, `1_2-F` == 1, `122-122-S4` == 1, `1_4-F` == 1, `145-545-S5` == 1) %>% 
   #filter_all(any_vars (. == 1)) %>% 
   column_to_rownames()
@@ -1171,7 +1169,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_16 <- as.matrix(alleles)
 
 t_g.mat_Line_16 <- t(g.mat_Line_16)
-t_g.mat_Line_16 <- cbind(t_g.mat_Line_16, `1654-45-S3` = rep(NA, 43929))
+t_g.mat_Line_16 <- cbind(t_g.mat_Line_16, `1654-45-S3` = rep(NA, 42530))
 
 col.order <- c("16_1-F", "1611-S1", "1611-2-S2", "1611-21-S3", "1611-211-S4", 
                "16_2-F", "1621-S1", "1621-221-S4",
@@ -1501,7 +1499,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_19 <- as.matrix(alleles)
 
 t_g.mat_Line_19 <- t(g.mat_Line_19)
-t_g.mat_Line_19 <- cbind(t_g.mat_Line_19, `1922-11-S3` = rep(NA, 43929))
+t_g.mat_Line_19 <- cbind(t_g.mat_Line_19, `1922-11-S3` = rep(NA, 42530))
 
 col.order <- c("19_1-F", "1912-S1", "1912-131-S4", 
                "19_2-F", "1922-S1", "1922-1-S2", "1922-11-S3", "1922-111-S4",
@@ -1554,7 +1552,7 @@ Line_19_2_corrected <- new_19_2_cor %>%
 # Filtering Line 19_5
 Line_19_5 <- df_gmat_Line_19 %>% 
   rownames_to_column() %>%
-  select(1, 9:13) %>% 
+  select(1, 10:14) %>% 
   # filter(((`386-P` == 1 & `253-P` == 1) | (`386-P` == 1 & `253-P` == 0) | (`386-P` == 1 & `253-P` == 2) | 
   #           (`386-P` == 0 & `253-P` == 1) | (`386-P` == 0 & `253-P` == 2) | (`386-P` == 2 & `253-P` == 0) | (`386-P` == 2 & `253-P` == 1)) & 
   #          `17_2-F` == 1 & `1721-S1` == 1 & `1721-1-S2` == 1 & `1721-11-S3` == 1 & `1721-111-S4` == 1 & `1721-111-S5` == 1) %>% 
@@ -2135,7 +2133,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_26 <- as.matrix(alleles)
 
 t_g.mat_Line_26 <- t(g.mat_Line_26)
-t_g.mat_Line_26 <- cbind(t_g.mat_Line_26, `2612-12-S3` = rep(NA, 43929))
+t_g.mat_Line_26 <- cbind(t_g.mat_Line_26, `2612-12-S3` = rep(NA, 42530))
 
 col.order <- c("26_4-F", "2645-S1", "2645-4-S2", "2645-46-S3", "2645-464-S4",
                "26_1-F", "2612-S1", "2612-1-S2", "2612-12-S3",  "2612-121-S4", 
@@ -2274,7 +2272,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_27 <- as.matrix(alleles)
 
 t_g.mat_Line_27 <- t(g.mat_Line_27)
-t_g.mat_Line_27 <- cbind(t_g.mat_Line_27, `2721-12-S3` = rep(NA, 43929))
+t_g.mat_Line_27 <- cbind(t_g.mat_Line_27, `2721-12-S3` = rep(NA, 42530))
 
 col.order <- c("27_1-F", "2712-S1", "2712-211-S4", 
                "27_2-F", "2721-S1", "2721-1-S2", "2721-12-S3", "2721-121-S4",
