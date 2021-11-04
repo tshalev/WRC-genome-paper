@@ -1,5 +1,3 @@
-rm(list = ls())
-
 library(asreml)
 library(asremlPlus)
 library(nadiv)
@@ -8,35 +6,39 @@ library(sommer)
 library(ggsci)
 library(tidyverse)
 
-source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
+source("publication_theme.r")
 
 library(extrafont)
 library(extrafontdb)
 
 # Diverse IB
-diverse_ibc <- read.table("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB28.HWE_het.mac3.1490k_r2_01.samples_sorted.ibc", header = T)
+diverse_ibc <- read.table("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB2575.HWE_het1e-5c25.mac3.1809kb_r201.ibc", header = T)
+diverse_ibc <- diverse_ibc %>% 
+  mutate(Fhat3_noneg = if_else(Fhat3 < 0, 0, Fhat3))
 
 # S lines IB
-S_lines_ibc <- read.table("corrected_snps_S_lines.1490k_r2_01.ibc", header = T)
+S_lines_ibc <- read.table("corrected_snps_S_lines.mac3.r201_1809kb.ibc", header = T)
 S_lines_ibc <- S_lines_ibc %>% 
   mutate(Fhat3_noneg = if_else(Fhat3 < 0, 0, Fhat3), exp = c(rep(0, 28), rep(0.5, 28), rep(0.75, 28), rep(0.875, 28), rep(0.9375, 28), rep(0.96875, 11)))
 
-## Summary stats
-S_lines_ibc %>% 
-  group_by(Generation) %>% 
-  summary(Fhat3_noneg = median(Fhat3_noneg, na.rm = T))
+S_lines_2_ibc <- read.table("plink.ibc", header = T)
 
-diverse_ibc %>% 
-  group_by(pop_simple) %>% 
-  summarise(Fhat3_noneg = mean(Fhat3_noneg, na.rm = T))
+S_lines_2_ibc <- S_lines_2_ibc %>% 
+  mutate(Fhat3_noneg = if_else(Fhat3 < 0, 0, Fhat3), exp = c(rep(0, 28), rep(0.5, 28), rep(0.75, 28), rep(0.875, 28), rep(0.9375, 28), rep(0.96875, 11)), 
+         Generation = c(rep("FS", 28), rep("S1", 28), rep("S2", 28), rep("S3", 28), rep("S4", 28), rep("S5", 11)))
+
+## Summary stats
+S_lines_2_ibc %>% 
+  group_by(Generation) %>% 
+  summarise(mean = mean(Fhat3_noneg, na.rm = T), median = median(Fhat3_noneg, na.rm = T), sd = sd(Fhat3_noneg))
 
 diverse_ibc %>% 
   # group_by(pop_simple) %>% 
-  summarise(Fhat3_noneg = mean(Fhat3_noneg, na.rm = T), median = median(Fhat3_noneg, na.rm = T))
+  summarise(mean = mean(Fhat3_noneg, na.rm = T), median = median(Fhat3_noneg, na.rm = T), sd = sd(Fhat3_noneg))
 
 
 # Plots for Figure 4
-fhat_gen_violin <- ggplot(S_lines_ibc, aes(x = Generation, y = Fhat3_noneg)) +
+fhat_gen_violin <- ggplot(S_lines_2_ibc, aes(x = Generation, y = Fhat3_noneg)) +
   geom_violin(scale = "area") +
   geom_point(aes(x = Generation, y = exp), shape = 23, fill = "red") +
   geom_boxplot(width = 0.15) +
