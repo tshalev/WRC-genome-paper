@@ -1,5 +1,3 @@
-rm(list=ls())
-
 library(gtsummary)
 library(reshape2)
 library(ggsci)
@@ -9,8 +7,8 @@ source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
 library(extrafont)
 library(extrafontdb)
 
-parent_vep <- read.delim("vep_1.3_variant_snps_all.txt", header = T, stringsAsFactors = T, na.strings = "-")
-significant_snps <- read.table("significant_snps_chisq_holm_1e-5_min_10_samples.txt", header = T)
+parent_vep <- read.delim("vep_1.3_variant_snps_h1e-5_c25.txt", header = T, stringsAsFactors = T, na.strings = "-")
+significant_snps <- read.table("significant_snps_hwe1e-5_c25.txt", header = T)
 diverse_maf <- read.table("diverse_pop_snp_maf.txt", header = T)
 wrc_sco_genes <- read.table("wrc_sco_genes.txt")
 
@@ -152,10 +150,9 @@ for(i in 1:15){
   lapply(z, write, "FET_results_compound_effects_removed.txt", append = T)
 }
 
-f <- fisher.test(x)
 
 ### MAF for outlier SNPs, most severe consequences ####
-S4_fate_table <- read.table("S4_fate_table_significant_min_10_samples.txt", header = T)
+S4_fate_table <- read.csv("S4_fate_table.csv", header = T)
 significant_snps <- S4_fate_table %>% 
   filter(p.adj.holm < 1e-05)
 
@@ -178,8 +175,7 @@ S4_fate_start_stop_splice_gained_lost <- S4_fate_table %>%
 
 ### JGI annotations ##########################
 
-gene_annotations <- read.table("gene.functions_dashes_removed.txt", skip = 1, header = F,
-                               sep = "\t")
+gene_annotations <- read.delim("gene.functions_dashes_removed.txt", header = F, stringsAsFactors = F, sep = "\t")
 
 gff <- read.table("Tplicatav3.1c.primaryTrs_dashes_removed_sorted.gff3")
 gff_genes <- gff %>% 
@@ -192,10 +188,7 @@ gff_genes[, "V9"] <- str_extract_all(gff_genes[, "V9"], "Thupl.*", simplify = TR
 gff_genes_sco <- gff_genes %>% 
   filter(V9 %in% wrc_sco_genes$V1)
 
-# write.table(gff_genes_sco, "gff_primary_genes_sco.gff3", row.names = F, col.names = F, quote = F)
-
-# gff_edit_id <- read.table("../Tplicatav3.1c.gene_exons_dashes_removed_final_edited_last_column.gff3")
-
+# write.table(gff_genes_sco, "gff_primary_genes_sco.gff3", row.names = F, col.names = F, quote = F, sep = "\t")
 
 ## significant snps ###
 significant_snp_annotations <- gene_annotations %>%
@@ -204,7 +197,7 @@ significant_snp_annotations <- gene_annotations %>%
 
 significant_snp_annotations <- merge(S_selected_snps_vep, significant_snp_annotations, by = "Gene", all = T)  
 
-write.csv(significant_snp_annotations, "significant_snp_JGI_annotations.csv")
+# write.csv(significant_snp_annotations, "significant_snp_JGI_annotations.csv")
 
 
 ### 4-fold and 0-fold genes ####
@@ -223,8 +216,8 @@ zero_fold_gff <- gff_genes %>%
 four_fold_gff <- gff_genes %>% 
   filter(V9 %in% four_fold_vep$Gene)
 
-write.table(zero_fold_gff, "zero-fold_gff.gff3", row.names = F, col.names = F, quote = F)
-write.table(four_fold_gff, "four-fold_gff.gff3", row.names = F, col.names = F, quote = F)
+# write.table(zero_fold_gff, "zero-fold_gff.gff3", row.names = F, col.names = F, quote = F)
+# write.table(four_fold_gff, "four-fold_gff.gff3", row.names = F, col.names = F, quote = F)
 
 ### GO annotations ######
 significant_snp_GO <- significant_snp_annotations %>% 
@@ -247,13 +240,17 @@ all_snp_annotations <- merge(parent_vep, all_snp_annotations, by = "Gene", all =
 all_snp_GO <- all_snp_annotations %>% 
   filter(V3 == "GO")
 
+# write.csv(all_snp_GO, "all_snps_GO.csv")
 all_snp_GO_one_snp_per_gene <- read.csv("all_snps_GO_one_snp_per_gene.csv", sep = ",", header = T)
 # write.csv(table(all_snp_GO_one_snp_per_gene$V2), "all_snp_GO_ID_table.csv")
 # write.csv(table(all_snp_GO_one_snp_per_gene$V4), "all_snp_GO_term_table.csv")
 
+all_snp_GO_sco <- all_snp_GO_one_snp_per_gene %>% filter(Gene %in% wrc_sco_genes$V1)
+significant_snp_GO_sco <- significant_snp_GO_one_snp_per_gene %>% filter(Gene %in% wrc_sco_genes$V1)
+
 select_GO_counts <- read.table("significant_snp_GO_ID_table.csv", sep = ",", header = T)
 all_GO_counts <- read.table("all_snp_GO_ID_table.csv", sep = ",", header = T)
-
+  
 merged_GO_counts <- merge(all_GO_counts, select_GO_counts, by = "Var1", all = T)
 merged_GO_counts[is.na(merged_GO_counts)] <- 0
 
@@ -272,7 +269,7 @@ for(i in 1:1220){
   x <- table_maker_func(i)
   y <- fisher.test(x, alternative = "less")
   z <- data.frame(Name = row.names(x)[1], p = y$p.value, estimate = y$estimate)
-  lapply(z, write, "FET_results_GO_categories.txt", append = T)
+  lapply(z, write, "FET_results_GO_categories_sco.txt", append = T)
 }
 
 # ### Heterozygous SNPs in genes #############
