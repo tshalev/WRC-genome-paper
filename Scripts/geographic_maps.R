@@ -9,7 +9,7 @@ library(ggsci)
 library(ggspatial)
 library(elevatr)
 library(tidyverse)
-source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
+source("publication_theme.r")
 
 ### Load data and set up map properties ####
 # Typically, load from NaturalEarth, but lately the database has been down so can also download and load it manually
@@ -58,4 +58,4 @@ map <- ggplot() +
   theme(legend.position = c(0.188, 0.3), legend.background = element_rect(colour = "black"))
 
 
-ggsave("all_parents_geog_locations_clusters.svg", map, width = 7.5, height = 12)
+ggsave("all_parents_geog_locations.svg", map, width = 7, height = 8)
