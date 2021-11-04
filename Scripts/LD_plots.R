@@ -3,7 +3,7 @@ rm(list=ls())
 # load libraries
 library(tidyverse)
 
-source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
+source("publication_theme.r")
 library(extrafont)
 
 # define plotting functions
@@ -115,7 +115,7 @@ plotDecayLD <- function(dfr,chr,xlim=c(NA,NA),ylim=c(NA,NA),avgwin=0,minr2) {
 
 # read file
 
-ld <- read.table("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB28.HWE_het.maf05.ld", header = T)
+ld <- read.table("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB2575.HWE_het1e-5c25.maf05.ld", header = T)
 ld$CHR_A <- factor(ld$CHR_A)
 ld$CHR_B <- factor(ld$CHR_B)
 
@@ -133,10 +133,10 @@ ld.df<-ld.df[order(ld.df$distance),]
 
 ## Plots for Figure 2
 pairwise_LD <- plotPairwiseLD(ld, minr2 = 0)
-ggsave("parents_pairwise_ld_pub_theme2.tiff", pairwise_LD, height = 6, width = 7)
+ggsave("parents_pairwise_ld.tiff", pairwise_LD, height = 6, width = 7)
 
 LD_decay <- plotDecayLD(ld, avgwin = 10)
-ggsave("parents_ld_decay_avg_win_10_1_decay_no_grid_pub_theme.tiff", LD_decay, height = 6, width = 7)
+ggsave("parents_ld_decay_avg_win_10_1_decay.tiff", LD_decay, height = 6, width = 7)
 
 ## LD decay thresholds, half-decay ####
 
