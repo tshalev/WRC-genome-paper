@@ -14,11 +14,11 @@ library(ggpubr)
 library(rstatix)
 library(tidyverse)
 
-source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
+source("publication_theme.r")
 
 # Read in VCF
 
-parents_mac_3_r2_01_vcf <- read.vcfR("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB28.HWE_het.mac3.1490k_r2_01.samples_sorted.recode.vcf")
+parents_mac_3_r2_01_vcf <- read.vcfR("diverse_pop.final.g95minQ30minmeanDP15maxmeanDP70AB2575.HWE_het1e-5c25.mac3.r201_1809kb.recode.vcf")
 
 # Read in popmap
 clusters_popmap <- read.table("popmap_diverse_pop_clusters.txt")
@@ -66,11 +66,20 @@ all_geo_dist_mat[upper.tri(all_geo_dist_mat,diag=TRUE)] <- ""
 all_gen_dist_mat <- dist(parents_mac_3_r2_01_no_pop_genind, method = "euclidean", diag = F, upper = F, p)
 
 all_geo_dist_vector <- c(all_geo_dist_mat)
+
+parents_mac_3_r2_01_genpop <- genind2genpop(parents_mac_3_r2_01_no_pop_genind)
+Dgen <- dist.genpop(parents_mac_3_r2_01_genpop, method = 2)
+Dgeo <- dist(cbind(all_geo_dist$Longitude, all_geo_dist$Latitude))
+
 all_gen_dist_vector <- c(Dgen)
 
 all_geo_dist_vector <- as.numeric(all_geo_dist_vector[all_geo_dist_vector != ""])
 
 geo_gen_dist_df <- data.frame(geo = all_geo_dist_vector/1000, gen = all_gen_dist_vector)
+
+ibd <- mantel.randtest(Dgen, Dgeo, nrepet = 9999)
+
+ibd
 
 # Plot individual correlation ge gen dist
 ggplot(geo_gen_dist_df, aes(x = geo, y = gen)) +
@@ -144,20 +153,63 @@ p <- fviz_pca_ind(pca_parents_mac_3_r2_01,
 pca_plot <- p + 
   theme_Publication() +
   labs(title = NULL) +
-  xlab("PC 1 (2.98%)") + 
-  ylab("PC 2 (1.49%)") +
+  xlab("PC 1 (3.12%)") + 
+  ylab("PC 2 (1.46%)") +
   scale_color_manual(name="Cluster",
                      breaks=c("Northern_Coastal", "Central", "Southern_Interior"),
                      labels=c("Northern-Coastal", "Central", "Southern-Interior"),
                      values = col) +
-  theme(legend.position = c(0.16, 0.92), legend.background = element_rect(colour = "black"))
+  theme(legend.position = c(0.22, 0.92), legend.background = element_rect(colour = "black"))
 
 pca_plot
-ggsave("pca_plot_pops_all_snps_clusters.tiff", pca_plot, width = 6, height = 6)
+ggsave("pca_plot_pops_all_snps_clusters.tiff", pca_plot, width = 7, height = 8, dpi = 300)
 
 
 ### DAPC ###########################################
 
+## DAPC cross-validation ####
+
+parents_mac_3_r2_01_cluster_xdapc <- xvalDapc(tab(parents_mac_3_r2_01_genind, NA.method = "mean"), clusters_popmap$V2, n.pca = 1:200)
+parents_mac_3_r2_01_cluster_xdapc <- xvalDapc(tab(parents_mac_3_r2_01_genind, NA.method = "mean"), pop(parents_mac_3_r2_01_genind), n.pca = 1:70, n.rep = 1000, parallel = "snow", ncpus = 6L)
+
+
+scatter(parents_mac_3_r2_01_cluster_xdapc$DAPC, cex = 2, legend = TRUE, 
+        clabel = FALSE, posi.leg = "bottomleft", scree.pca = TRUE,
+        posi.pca = "topleft", cleg = 0.75, xax = 1, yax = 2, inset.solid = 1,)
+
+scatter(parents_mac_3_r2_01_clusters_dapc, cex = 2, legend = TRUE,
+        clabel = FALSE, posi.leg = "bottomleft", scree.pca = TRUE,
+        posi.pca = "topleft", cleg = 0.75, xax = 1, yax = 2, inset.solid = 1)
+
+par(new=TRUE)
+
+df <- data.frame(x = parents_mac_3_r2_01_cluster_xdapc$DAPC$ind.coord[,1], y = parents_mac_3_r2_01_cluster_xdapc$DAPC$ind.coord[,2])
+
+s.label(dfxy = df, xax=1, yax=2, label=as.character(clusters_popmap$V1),
+        clabel=0.7, # change the size of the labels
+        boxes=TRUE, # if points are spaced wide enough, can use TRUE to add boxes around the labels
+        grid=FALSE, addaxes=FALSE) # do not draw lines or axes in addition to the labels
+
+mac3_r2_01_dapc <- parents_mac_3_r2_01_cluster_xdapc$DAPC
+
+dapc.results <- as.data.frame(mac3_r2_01_dapc$posterior)
+dapc.results$pop <- pop(parents_mac_3_r2_01_genind)
+dapc.results$indNames <- rownames(dapc.results)
+
+dapc.results <- pivot_longer(dapc.results, -c(pop, indNames))
+
+colnames(dapc.results) <- c("Original_Pop","Sample","Assigned_Pop","Posterior_membership_probability")
+
+col <- c(pal_nejm()(8), "#6A3D9A", "#A6CEE3")
+
+p <- ggplot(dapc.results, aes(x=Sample, y=Posterior_membership_probability, fill=Assigned_Pop))
+p <- p + geom_bar(stat='identity') 
+p <- p + scale_fill_manual(values = col) 
+p <- p + facet_grid(~Original_Pop, scales = "free")
+p <- p + theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 8))
+p
+
+### DAPC K selection ####
 # Adapted from https://grunwaldlab.github.io/Population_Genetics_in_R/
 maxK <- 10
 myMat <- matrix(nrow=10, ncol=maxK)
@@ -178,7 +230,7 @@ p1 <- p1 + theme_pubr()
 p1 <- p1 + xlab("Number of groups (K)")
 p1
 
-my_k <- 2:5
+my_k <- 2:3
 
 grp_l <- vector(mode = "list", length = length(my_k))
 dapc_l <- vector(mode = "list", length = length(my_k))
@@ -186,7 +238,7 @@ dapc_l <- vector(mode = "list", length = length(my_k))
 for(i in 1:length(dapc_l)){
   set.seed(200)
   grp_l[[i]] <- find.clusters(parents_mac_3_r2_01_genind, n.pca = 200, n.clust = my_k[i])
-  dapc_l[[i]] <- dapc(parents_mac_3_r2_01_genind, pop = grp_l[[i]]$grp, n.pca = 25, n.da = my_k[i])
+  dapc_l[[i]] <- dapc(parents_mac_3_r2_01_genind, pop = grp_l[[i]]$grp, n.pca = 30, n.da = my_k[i])
   #  dapc_l[[i]] <- dapc(gl_rubi, pop = grp_l[[i]]$grp, n.pca = 3, n.da = 2)
 }
 
@@ -252,45 +304,3 @@ ggarrange(ggarrange(p1,
 )
 
 ggsave("dapc_multiplot.svg", dpi = 300, width = 15, height = 10)
-
-## DAPC cross-validation ####
-
-parents_mac_3_r2_01_cluster_xdapc <- xvalDapc(tab(parents_mac_3_r2_01_genind, NA.method = "mean"), clusters_popmap$V2, n.pca = 1:200)
-parents_mac_3_r2_01_cluster_xdapc <- xvalDapc(tab(parents_mac_3_r2_01_genind, NA.method = "mean"), pop(parents_mac_3_r2_01_genind), n.pca = 1:70, n.rep = 1000, parallel = "snow", ncpus = 6L)
-
-
-scatter(parents_mac_3_r2_01_cluster_xdapc$DAPC, cex = 2, legend = TRUE, 
-        clabel = FALSE, posi.leg = "bottomleft", scree.pca = TRUE,
-        posi.pca = "topleft", cleg = 0.75, xax = 1, yax = 2, inset.solid = 1,)
-
-scatter(parents_mac_3_r2_01_clusters_dapc, cex = 2, legend = TRUE,
-        clabel = FALSE, posi.leg = "bottomleft", scree.pca = TRUE,
-        posi.pca = "topleft", cleg = 0.75, xax = 1, yax = 2, inset.solid = 1)
-
-par(new=TRUE)
-
-df <- data.frame(x = parents_mac_3_r2_01_cluster_xdapc$DAPC$ind.coord[,1], y = parents_mac_3_r2_01_cluster_xdapc$DAPC$ind.coord[,2])
-
-s.label(dfxy = df, xax=1, yax=2, label=as.character(clusters_popmap$V1),
-        clabel=0.7, # change the size of the labels
-        boxes=TRUE, # if points are spaced wide enough, can use TRUE to add boxes around the labels
-        grid=FALSE, addaxes=FALSE) # do not draw lines or axes in addition to the labels
-
-mac3_r2_01_dapc <- parents_mac_3_r2_01_cluster_xdapc$DAPC
-
-dapc.results <- as.data.frame(mac3_r2_01_dapc$posterior)
-dapc.results$pop <- pop(parents_mac_3_r2_01_genind)
-dapc.results$indNames <- rownames(dapc.results)
-
-dapc.results <- pivot_longer(dapc.results, -c(pop, indNames))
-
-colnames(dapc.results) <- c("Original_Pop","Sample","Assigned_Pop","Posterior_membership_probability")
-
-col <- c(pal_nejm()(8), "#6A3D9A", "#A6CEE3")
-  
-p <- ggplot(dapc.results, aes(x=Sample, y=Posterior_membership_probability, fill=Assigned_Pop))
-p <- p + geom_bar(stat='identity') 
-p <- p + scale_fill_manual(values = col) 
-p <- p + facet_grid(~Original_Pop, scales = "free")
-p <- p + theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 8))
-p
