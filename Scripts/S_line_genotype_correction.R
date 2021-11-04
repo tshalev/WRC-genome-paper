@@ -1,12 +1,9 @@
-rm(list=ls())
-
 library(sommer)
 library(reshape2)
 library(RColorBrewer)
 library(pheatmap)
 library(tidyverse)
-source("~/UBC/GSAT/PhD/WRC/r_scripts/publication_theme.r")
-
+source("publication_theme.r")
 
 ## Zygosity correction functions #######################################################################################
 zygosity_correction_fun_F_S5 <- function(x){
@@ -331,7 +328,7 @@ Line_1_1_corrected <- new_1_1_cor %>%
   filter(!(row.names(new_1_1_cor) %in% row.names(test_1_1))) %>% 
   column_to_rownames()
 
-# write.table(Line_1_1_corrected, "corrected_full_lines_noparents/Line_1_1_corrected.txt", quote = F)
+
 
 # new_1_4 <- zygosity_correction_fun_F_S5(Line_1_4)
 # new_1_4_cor <- new_1_4 %>%
@@ -365,7 +362,6 @@ Line_1_1_corrected <- new_1_1_cor %>%
 #   filter(!(row.names(new_1_4_cor) %in% row.names(test_1_4))) %>% 
 #   column_to_rownames()
 
-# write.table(Line_1_4_corrected, "corrected_full_lines_noparents/Line_1_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_1_1$`1_1-F`)
@@ -391,7 +387,7 @@ table(Line_1_4$`145-545-S5`)
 pheatmap(Line_1_4_corrected[1200:1300,], cluster_rows = F, cluster_cols = F, color = my_col, show_rownames = F)
 dev.off()
 
-#write.table(rownames(Line_1_1), "snp_zygosity_analysis/Line_11_1_heterozygote_persistence_no_parents_snps.txt", quote = F, row.names = F, col.names = F)
+#write.csv(rownames(Line_1_1), "snp_zygosity_analysis/Line_11_1_heterozygote_persistence_no_parents_snps.txt", row.names = F, col.names = F)
 ##Line 6#################################################################################################################
 
 # Read in Line 6 012 file
@@ -516,9 +512,6 @@ Line_6_4_corrected <- new_6_4_cor %>%
   filter(!(row.names(new_6_4_cor) %in% row.names(test_6_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_6_1_corrected, "corrected_full_lines_noparents/Line_6_1_corrected.txt", quote = F)
-# write.table(Line_6_2, "corrected_full_lines_noparents/Line_6_2_corrected.txt", quote = F)
-# write.table(Line_6_4_corrected, "corrected_full_lines_noparents/Line_6_4_corrected.txt", quote = F)
 
 # Line_6_1_het_parents_minor_allele_homozygote <- df_gmat_line_6 %>% 
 #   rownames_to_column() %>%
@@ -589,11 +582,11 @@ table(Line_6_4_corrected$`646-454-S5`)
 
 pheatmap(Line_6_1_corrected[1:100,], cluster_rows = F, cluster_cols = F, color = my_col)
 
-# write.table(Line_6_1, "snp_zygosity_analysis/Line_6_1_heterozygote_persistence.txt", quote = F)
-# write.table(Line_6_4, "snp_zygosity_analysis/Line_6_4_heterozygote_persistence.txt", quote = F)
+# write.csv(Line_6_1, "snp_zygosity_analysis/Line_6_1_heterozygote_persistence.txt")
+# write.csv(Line_6_4, "snp_zygosity_analysis/Line_6_4_heterozygote_persistence.txt")
 # 
-# write.table(rownames(Line_6_1), "snp_zygosity_analysis/Line_6_1_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_6_4), "snp_zygosity_analysis/Line_6_4_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
+# write.csv(rownames(Line_6_1), "snp_zygosity_analysis/Line_6_1_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_6_4), "snp_zygosity_analysis/Line_6_4_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
 
 #Line 7##################################################################################################################
 
@@ -625,7 +618,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_7 <- as.matrix(alleles)
 
 t_g.mat_Line_7 <- t(g.mat_Line_7)
-t_g.mat_Line_7 <- cbind(t_g.mat_Line_7, `721-21-S3` = rep(NA, 42530))
+t_g.mat_Line_7 <- cbind(t_g.mat_Line_7, `721-21-S3` = rep(NA, 38748))
 col.order <- c("7_1-F", "712-S1","712-111-S4",
                "7_2-F", "721-S1", "721-2-S2", "721-21-S3","721-211-S4",
                "7_4-F", "745-S1", "745-4-S2", "745-44-S3", "745-444-S4")
@@ -704,8 +697,6 @@ Line_7_4_corrected <- new_7_4_cor %>%
   filter(!(row.names(new_7_4_cor) %in% row.names(test_7_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_7_2_corrected, "corrected_full_lines_noparents/Line_7_2_corrected.txt", quote = F)
-# write.table(Line_7_4_corrected, "corrected_full_lines_noparents/Line_7_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_7_4$`7_4-F`)
@@ -794,8 +785,6 @@ Line_8_2_corrected <- new_8_2_cor %>%
   filter(!(row.names(new_8_2_cor) %in% row.names(test_8_2))) %>% 
   column_to_rownames()
 
-# write.table(Line_8_2_corrected, "corrected_full_lines_noparents/Line_8_2_corrected.txt", quote = F)
-
 # Filter Line 8_4
 Line_8_4 <- df_gmat_line_8 %>% 
   rownames_to_column() %>%
@@ -831,7 +820,6 @@ Line_8_4_corrected <- new_8_4_cor %>%
   filter(!(row.names(new_8_4_cor) %in% row.names(test_8_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_8_4_corrected, "corrected_full_lines_noparents/Line_8_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_8_2$`8_2-F`)
@@ -888,7 +876,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_10 <- as.matrix(alleles)
 
 t_g.mat_Line_10 <- t(g.mat_Line_10)
-t_g.mat_Line_10 <- cbind(t_g.mat_Line_10, `1022-11-S3` = rep(NA, 42530), `1056-45-S3` = rep(NA, 42530))
+t_g.mat_Line_10 <- cbind(t_g.mat_Line_10, `1022-11-S3` = rep(NA, 38748), `1056-45-S3` = rep(NA, 38748))
 
 col.order <- c("10_1-F", "1011-S1", "1011-121-S4",
                "10_2-F", "1022-S1", "1022-1-S2", "1022-11-S3", "1022-113-S4", "1022-113-S5",
@@ -979,9 +967,6 @@ Line_10_5_corrected <- new_10_5_cor %>%
   filter(!(row.names(new_10_5_cor) %in% row.names(test_10_5))) %>% 
   column_to_rownames()
 
-# write.table(Line_10_2_corrected, "corrected_full_lines_noparents/Line_10_2_corrected.txt", quote = F)
-# write.table(Line_10_5_corrected, "corrected_full_lines_noparents/Line_10_5_corrected.txt", quote = F)
-
 # how many heterozygotes
 table(Line_10_5$`10_5-F`)
 
@@ -997,13 +982,13 @@ pheatmap(Line_10_2, cluster_rows = F, cluster_cols = F, color = my_col)
 
 table(Line_10_5$`10_5-F`)
 
-# write.table(Line_10_1, "snp_zygosity_analysis/Line_10_1_heterozygote_persistence.txt", quote = F)
-# write.table(Line_10_2, "snp_zygosity_analysis/Line_10_2_heterozygote_persistence.txt", quote = F)
-# write.table(Line_10_5, "snp_zygosity_analysis/Line_10_5_heterozygote_persistence.txt", quote = F)
+# write.csv(Line_10_1, "snp_zygosity_analysis/Line_10_1_heterozygote_persistence.txt")
+# write.csv(Line_10_2, "snp_zygosity_analysis/Line_10_2_heterozygote_persistence.txt")
+# write.csv(Line_10_5, "snp_zygosity_analysis/Line_10_5_heterozygote_persistence.txt")
 # 
-# write.table(rownames(Line_10_1), "snp_zygosity_analysis/Line_10_1_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_10_2), "snp_zygosity_analysis/Line_10_2_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_10_5), "snp_zygosity_analysis/Line_10_5_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
+# write.csv(rownames(Line_10_1), "snp_zygosity_analysis/Line_10_1_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_10_2), "snp_zygosity_analysis/Line_10_2_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_10_5), "snp_zygosity_analysis/Line_10_5_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
 
 #Line 13##################################################################################################################
 
@@ -1035,7 +1020,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_13 <- as.matrix(alleles)
 
 t_g.mat_Line_13 <- t(g.mat_Line_13)
-t_g.mat_Line_13 <- cbind(t_g.mat_Line_13, `1332-11-S3` = rep(NA, 42530))
+t_g.mat_Line_13 <- cbind(t_g.mat_Line_13, `1332-11-S3` = rep(NA, 38748))
 
 col.order <- c("13_2-F", "1323-S1", "1323-211-S4", 
                "13_3-F", "1332-S1", "1332-1-S2", "1332-11-S3", "1332-111-S4",
@@ -1121,8 +1106,6 @@ Line_13_4_corrected <- new_13_4_cor %>%
   filter(!(row.names(new_13_4_cor) %in% row.names(test_13_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_13_3_corrected, "corrected_full_lines_noparents/Line_13_3_corrected.txt", quote = F)
-# write.table(Line_13_4_corrected, "corrected_full_lines_noparents/Line_13_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_13_4$`13_4-F`)
@@ -1169,7 +1152,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_16 <- as.matrix(alleles)
 
 t_g.mat_Line_16 <- t(g.mat_Line_16)
-t_g.mat_Line_16 <- cbind(t_g.mat_Line_16, `1654-45-S3` = rep(NA, 42530))
+t_g.mat_Line_16 <- cbind(t_g.mat_Line_16, `1654-45-S3` = rep(NA, 38748))
 
 col.order <- c("16_1-F", "1611-S1", "1611-2-S2", "1611-21-S3", "1611-211-S4", 
                "16_2-F", "1621-S1", "1621-221-S4",
@@ -1262,8 +1245,6 @@ Line_16_5_corrected <- new_16_5_cor %>%
   filter(!(row.names(new_16_5_cor) %in% row.names(test_16_5))) %>% 
   column_to_rownames()
 
-# write.table(Line_16_1_corrected, "corrected_full_lines_noparents/Line_16_1_corrected.txt", quote = F)
-# write.table(Line_16_5_corrected, "corrected_full_lines_noparents/Line_16_5_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_16_1$`16_1-F`)
@@ -1297,13 +1278,13 @@ table(Line_16_1$`16_1-F`)
 pheatmap(inbred_heterozygotes, cluster_rows = F, cluster_cols = F, color = my_col, show_rownames = F)
 dev.off()
 
-# write.table(Line_16_1, "snp_zygosity_analysis/Line_16_1_heterozygote_persistence.txt", quote = F)
-# write.table(Line_16_2, "snp_zygosity_analysis/Line_16_2_heterozygote_persistence.txt", quote = F)
-# write.table(Line_16_5, "snp_zygosity_analysis/Line_16_5_heterozygote_persistence.txt", quote = F)
+# write.csv(Line_16_1, "snp_zygosity_analysis/Line_16_1_heterozygote_persistence.txt")
+# write.csv(Line_16_2, "snp_zygosity_analysis/Line_16_2_heterozygote_persistence.txt")
+# write.csv(Line_16_5, "snp_zygosity_analysis/Line_16_5_heterozygote_persistence.txt")
 # 
-# write.table(rownames(Line_16_1), "snp_zygosity_analysis/Line_16_1_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_16_2), "snp_zygosity_analysis/Line_16_2_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_16_5), "snp_zygosity_analysis/Line_16_5_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
+# write.csv(rownames(Line_16_1), "snp_zygosity_analysis/Line_16_1_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_16_2), "snp_zygosity_analysis/Line_16_2_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_16_5), "snp_zygosity_analysis/Line_16_5_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
 #Line 17##################################################################################################################
 
 # Read in Line 17 012 file
@@ -1388,7 +1369,6 @@ Line_17_2_corrected <- new_17_2_cor %>%
   filter(!(row.names(new_17_2_cor) %in% row.names(test_17_2))) %>% 
   column_to_rownames()
 
-# write.table(Line_17_2_corrected, "corrected_full_lines_noparents/Line_17_2_corrected.txt", quote = F)
 
 # Filtering Line 17_5
 Line_17_5 <- df_gmat_Line_17 %>% 
@@ -1434,7 +1414,6 @@ Line_17_5_corrected <- new_17_5_cor %>%
   filter(!(row.names(new_17_5_cor) %in% row.names(test_17_5))) %>% 
   column_to_rownames()
 
-# write.table(Line_17_5_corrected, "corrected_full_lines_noparents/Line_17_5_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_17_2$`17_2-F`)
@@ -1464,11 +1443,11 @@ table(Line_17_2$`17_2-F`)
 pheatmap(inbred_heterozygotes, cluster_rows = F, cluster_cols = F, color = my_col, show_rownames = F)
 dev.off()
 
-# write.table(Line_17_2, "snp_zygosity_analysis/Line_17_2_heterozygote_persistence.txt", quote = F)
-# write.table(Line_17_5, "snp_zygosity_analysis/Line_17_5_heterozygote_persistence.txt", quote = F)
+# write.csv(Line_17_2, "snp_zygosity_analysis/Line_17_2_heterozygote_persistence.txt")
+# write.csv(Line_17_5, "snp_zygosity_analysis/Line_17_5_heterozygote_persistence.txt")
 # 
-# write.table(rownames(Line_17_2), "snp_zygosity_analysis/Line_17_2_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_17_5), "snp_zygosity_analysis/Line_17_5_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
+# write.csv(rownames(Line_17_2), "snp_zygosity_analysis/Line_17_2_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_17_5), "snp_zygosity_analysis/Line_17_5_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
 #Line 19##################################################################################################################
 
 # Read in Line 19 012 file
@@ -1499,7 +1478,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_19 <- as.matrix(alleles)
 
 t_g.mat_Line_19 <- t(g.mat_Line_19)
-t_g.mat_Line_19 <- cbind(t_g.mat_Line_19, `1922-11-S3` = rep(NA, 42530))
+t_g.mat_Line_19 <- cbind(t_g.mat_Line_19, `1922-11-S3` = rep(NA, 38748))
 
 col.order <- c("19_1-F", "1912-S1", "1912-131-S4", 
                "19_2-F", "1922-S1", "1922-1-S2", "1922-11-S3", "1922-111-S4",
@@ -1587,8 +1566,6 @@ Line_19_5_corrected <- new_19_5_cor %>%
   filter(!(row.names(new_19_5_cor) %in% row.names(test_19_5))) %>% 
   column_to_rownames()
 
-# write.table(Line_19_2_corrected, "corrected_full_lines_noparents/Line_19_2_corrected.txt", quote = F)
-# write.table(Line_19_5_corrected, "corrected_full_lines_noparents/Line_19_5_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_19_5$`19_5-F`)
@@ -1688,8 +1665,6 @@ Line_20_1_corrected <- new_20_1_cor %>%
   filter(!(row.names(new_20_1_cor) %in% row.names(test_20_1))) %>% 
   column_to_rownames()
 
-# write.table(Line_20_1_corrected, "corrected_full_lines_noparents/Line_20_1_corrected.txt", quote = F)
-
 # Filter Line 20_4
 Line_20_4 <- df_gmat_Line_20 %>% 
   rownames_to_column() %>%
@@ -1725,7 +1700,6 @@ Line_20_4_corrected <- new_20_4_cor %>%
   filter(!(row.names(new_20_4_cor) %in% row.names(test_20_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_20_4_corrected, "corrected_full_lines_noparents/Line_20_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_20_1$`20_1-F`)
@@ -1843,8 +1817,6 @@ Line_21_2_corrected <- new_21_2_cor %>%
   filter(!(row.names(new_21_2_cor) %in% row.names(test_21_2))) %>% 
   column_to_rownames()
 
-# write.table(Line_21_2_corrected, "corrected_full_lines_noparents/Line_21_2_corrected.txt", quote = F)
-
 # Filtering Line 21_6
 Line_21_6 <- df_gmat_Line_21 %>% 
   rownames_to_column() %>%
@@ -1888,7 +1860,6 @@ Line_21_6_corrected <- new_21_6_cor %>%
   filter(!(row.names(new_21_6_cor) %in% row.names(test_21_6))) %>% 
   column_to_rownames()
 
-# write.table(Line_21_6_corrected, "corrected_full_lines_noparents/Line_21_6_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_21_2$`21_2-F`)
@@ -1919,13 +1890,13 @@ table(Line_21_6$`2165-444-S5`)
 pheatmap(inbred_heterozygotes, cluster_rows = F, cluster_cols = F, color = my_col, show_rownames = F)
 dev.off()
 
-# write.table(Line_21_1, "snp_zygosity_analysis/Line_21_1_heterozygote_persistence.txt", quote = F)
-# write.table(Line_21_2, "snp_zygosity_analysis/Line_21_2_heterozygote_persistence.txt", quote = F)
-# write.table(Line_21_6, "snp_zygosity_analysis/Line_21_6_heterozygote_persistence.txt", quote = F)
+# write.csv(Line_21_1, "snp_zygosity_analysis/Line_21_1_heterozygote_persistence.txt")
+# write.csv(Line_21_2, "snp_zygosity_analysis/Line_21_2_heterozygote_persistence.txt")
+# write.csv(Line_21_6, "snp_zygosity_analysis/Line_21_6_heterozygote_persistence.txt")
 # 
-# write.table(rownames(Line_21_1), "snp_zygosity_analysis/Line_21_1_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_21_2), "snp_zygosity_analysis/Line_21_2_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_21_6), "snp_zygosity_analysis/Line_21_6_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
+# write.csv(rownames(Line_21_1), "snp_zygosity_analysis/Line_21_1_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_21_2), "snp_zygosity_analysis/Line_21_2_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_21_6), "snp_zygosity_analysis/Line_21_6_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
 ##Line 23#################################################################################################################
 
 # Read in Line 23 012 file
@@ -2008,8 +1979,6 @@ Line_23_2_corrected <- new_23_2_cor %>%
   filter(!(row.names(new_23_2_cor) %in% row.names(test_23_2))) %>% 
   column_to_rownames()
 
-# write.table(Line_23_2_corrected, "corrected_full_lines_noparents/Line_23_2_corrected.txt", quote = F)
-
 Line_23_4 <- df_gmat_Line_23 %>% 
   rownames_to_column() %>%
   select(1, 8:12) %>% 
@@ -2047,7 +2016,6 @@ Line_23_4_corrected <- new_23_4_cor %>%
   filter(!(row.names(new_23_4_cor) %in% row.names(test_23_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_23_4_corrected, "corrected_full_lines_noparents/Line_23_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_23_2$`23_2-F`)
@@ -2097,11 +2065,11 @@ inbred_heterozygotes_23_2 <- df_gmat_Line_23 %>%
 pheatmap(inbred_heterozygotes_23_2, cluster_rows = F, cluster_cols = F, color = my_col, show_rownames = F)
 dev.off()
 
-# write.table(Line_23_2, "snp_zygosity_analysis/Line_23_2_heterozygote_persistence.txt", quote = F)
-# write.table(Line_23_4, "snp_zygosity_analysis/Line_23_4_heterozygote_persistence.txt", quote = F)
+# write.csv(Line_23_2, "snp_zygosity_analysis/Line_23_2_heterozygote_persistence.txt")
+# write.csv(Line_23_4, "snp_zygosity_analysis/Line_23_4_heterozygote_persistence.txt")
 # 
-# write.table(rownames(Line_23_2), "snp_zygosity_analysis/Line_23_2_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
-# write.table(rownames(Line_23_4), "snp_zygosity_analysis/Line_23_4_heterozygote_persistence_parents_any_zygosity_snps.txt", quote = F, row.names = F, col.names = F)
+# write.csv(rownames(Line_23_2), "snp_zygosity_analysis/Line_23_2_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
+# write.csv(rownames(Line_23_4), "snp_zygosity_analysis/Line_23_4_heterozygote_persistence_parents_any_zygosity_snps.txt", row.names = F, col.names = F)
 
 #Line 26##################################################################################################################
 
@@ -2133,7 +2101,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_26 <- as.matrix(alleles)
 
 t_g.mat_Line_26 <- t(g.mat_Line_26)
-t_g.mat_Line_26 <- cbind(t_g.mat_Line_26, `2612-12-S3` = rep(NA, 42530))
+t_g.mat_Line_26 <- cbind(t_g.mat_Line_26, `2612-12-S3` = rep(NA, 38748))
 
 col.order <- c("26_4-F", "2645-S1", "2645-4-S2", "2645-46-S3", "2645-464-S4",
                "26_1-F", "2612-S1", "2612-1-S2", "2612-12-S3",  "2612-121-S4", 
@@ -2223,8 +2191,6 @@ Line_26_4_corrected <- new_26_4_cor %>%
   filter(!(row.names(new_26_4_cor) %in% row.names(test_26_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_26_1_corrected, "corrected_full_lines_noparents/Line_26_1_corrected.txt", quote = F)
-# write.table(Line_26_4_corrected, "corrected_full_lines_noparents/Line_26_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_26_1$`26_1-F`)
@@ -2272,7 +2238,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_27 <- as.matrix(alleles)
 
 t_g.mat_Line_27 <- t(g.mat_Line_27)
-t_g.mat_Line_27 <- cbind(t_g.mat_Line_27, `2721-12-S3` = rep(NA, 42530))
+t_g.mat_Line_27 <- cbind(t_g.mat_Line_27, `2721-12-S3` = rep(NA, 38748))
 
 col.order <- c("27_1-F", "2712-S1", "2712-211-S4", 
                "27_2-F", "2721-S1", "2721-1-S2", "2721-12-S3", "2721-121-S4",
@@ -2322,7 +2288,6 @@ Line_27_2_corrected <- new_27_2_cor %>%
   filter(!(row.names(new_27_2_cor) %in% row.names(test_27_2))) %>% 
   column_to_rownames()
 
-# write.table(Line_27_2_corrected, "corrected_full_lines_noparents/Line_27_2_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_27_6$`27_6-F`)
@@ -2428,7 +2393,6 @@ Line_29_2_corrected <- new_29_2_cor %>%
   filter(!(row.names(new_29_2_cor) %in% row.names(test_29_2))) %>% 
   column_to_rownames()
 
-# write.table(Line_29_2_corrected, "corrected_full_lines_noparents/Line_29_2_corrected.txt", quote = F)
 
 # Filtering Line 29_4
 Line_29_4 <- df_gmat_Line_29 %>% 
@@ -2473,7 +2437,6 @@ Line_29_4_corrected <- new_29_4_cor %>%
   filter(!(row.names(new_29_4_cor) %in% row.names(test_29_4))) %>% 
   column_to_rownames()
 
-# write.table(Line_29_4_corrected, "corrected_full_lines_noparents/Line_29_4_corrected.txt", quote = F)
 
 # how many heterozygotes
 table(Line_29_2_corrected$`29_2-F`)
@@ -2511,3 +2474,32 @@ inbred_heterozygotes <- df_gmat_Line_29 %>%
 pheatmap(inbred_heterozygotes, cluster_rows = F, cluster_cols = F, color = my_col, show_rownames = F)
 dev.off()
 
+### Write files #####
+# write.csv(Line_1_1_corrected, "Line_1_1_corrected.csv")
+# write.csv(Line_6_1_corrected, "Line_6_1_corrected.csv")
+# write.csv(Line_6_4_corrected, "Line_6_4_corrected.csv")
+# write.csv(Line_7_2_corrected, "Line_7_2_corrected.csv")
+# write.csv(Line_7_4_corrected, "Line_7_4_corrected.csv")
+# write.csv(Line_8_2_corrected, "Line_8_2_corrected.csv")
+# write.csv(Line_8_4_corrected, "Line_8_4_corrected.csv")
+# write.csv(Line_10_2_corrected, "Line_10_2_corrected.csv")
+# write.csv(Line_10_5_corrected, "Line_10_5_corrected.csv")
+# write.csv(Line_13_3_corrected, "Line_13_3_corrected.csv")
+# write.csv(Line_13_4_corrected, "Line_13_4_corrected.csv")
+# write.csv(Line_16_1_corrected, "Line_16_1_corrected.csv")
+# write.csv(Line_16_5_corrected, "Line_16_5_corrected.csv")
+# write.csv(Line_17_2_corrected, "Line_17_2_corrected.csv")
+# write.csv(Line_17_5_corrected, "Line_17_5_corrected.csv")
+# write.csv(Line_19_2_corrected, "Line_19_2_corrected.csv")
+# write.csv(Line_19_5_corrected, "Line_19_5_corrected.csv")
+# write.csv(Line_20_1_corrected, "Line_20_1_corrected.csv")
+# write.csv(Line_20_4_corrected, "Line_20_4_corrected.csv")
+# write.csv(Line_21_6_corrected, "Line_21_6_corrected.csv")
+# write.csv(Line_21_2_corrected, "Line_21_2_corrected.csv")
+# write.csv(Line_23_2_corrected, "Line_23_2_corrected.csv")
+# write.csv(Line_23_4_corrected, "Line_23_4_corrected.csv")
+# write.csv(Line_26_1_corrected, "Line_26_1_corrected.csv")
+# write.csv(Line_26_4_corrected, "Line_26_4_corrected.csv")
+# write.csv(Line_27_2_corrected, "Line_27_2_corrected.csv")
+# write.csv(Line_29_2_corrected, "Line_29_2_corrected.csv")
+# write.csv(Line_29_4_corrected, "Line_29_4_corrected.csv")
