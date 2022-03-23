@@ -1,0 +1,348 @@
+Gene,SNP,Scaffold,Allele,Feature,Feature_type,Consequence,cDNA_position,CDS_position,Protein_position,Amino_acids,Codons,V2,V3,V4
+Thupl.29004223s0001,29004223_2844,29004223,A,Thupl.29004223s0001.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0005506,GO,iron ion binding
+Thupl.29004223s0001,29004223_2844,29004223,A,Thupl.29004223s0001.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29004223s0001,29004223_2844,29004223,A,Thupl.29004223s0001.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0020037,GO,heme binding
+Thupl.29004223s0001,29004223_2844,29004223,A,Thupl.29004223s0001.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29183901s0001,29183901_2111,29183901,A,Thupl.29183901s0001.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0004190,GO,aspartic-type endopeptidase activity
+Thupl.29183901s0001,29183901_2111,29183901,A,Thupl.29183901s0001.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0006508,GO,proteolysis
+Thupl.29185024s0001,29185024_4020,29185024,A,Thupl.29185024s0001.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0004252,GO,serine-type endopeptidase activity
+Thupl.29185024s0001,29185024_4020,29185024,A,Thupl.29185024s0001.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0006508,GO,proteolysis
+Thupl.29188197s0001,29188197_1252,29188197,T,Thupl.29188197s0001.1.v3.1,Transcript,stop_gained,943,133,45,E/*,Gaa/Taa,GO:0004553,GO,"hydrolase activity, hydrolyzing O-glycosyl compounds"
+Thupl.29188197s0001,29188197_1252,29188197,T,Thupl.29188197s0001.1.v3.1,Transcript,stop_gained,943,133,45,E/*,Gaa/Taa,GO:0005975,GO,carbohydrate metabolic process
+Thupl.29209767s0001,29209767_1866,29209767,T,Thupl.29209767s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005524,GO,ATP binding
+Thupl.29209767s0001,29209767_1866,29209767,T,Thupl.29209767s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016887,GO,ATPase activity
+Thupl.29210005s0001,29210005_613,29210005,T,Thupl.29210005s0001.1.v3.1,Transcript,synonymous_variant,371,132,44,G,ggG/ggT,GO:0055114,GO,oxidation-reduction process
+Thupl.29211262s0001,29211262_6910,29211262,T,Thupl.29211262s0001.1.v3.1,Transcript,5_prime_UTR_variant,637,NA,NA,NA,NA,GO:0042256,GO,mature ribosome assembly
+Thupl.29211262s0001,29211262_6910,29211262,T,Thupl.29211262s0001.1.v3.1,Transcript,5_prime_UTR_variant,637,NA,NA,NA,NA,GO:0043022,GO,ribosome binding
+Thupl.29296098s0001,29296098_1287,29296098,T,Thupl.29296098s0001.1.v3.1,Transcript,missense_variant,1287,892,298,D/Y,Gat/Tat,GO:0004672,GO,protein kinase activity
+Thupl.29296098s0001,29296098_1287,29296098,T,Thupl.29296098s0001.1.v3.1,Transcript,missense_variant,1287,892,298,D/Y,Gat/Tat,GO:0005524,GO,ATP binding
+Thupl.29296098s0001,29296098_1287,29296098,T,Thupl.29296098s0001.1.v3.1,Transcript,missense_variant,1287,892,298,D/Y,Gat/Tat,GO:0006468,GO,protein phosphorylation
+Thupl.29338907s0001,29338907_178323,29338907,C,Thupl.29338907s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0004672,GO,protein kinase activity
+Thupl.29338907s0001,29338907_178323,29338907,C,Thupl.29338907s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29338907s0001,29338907_178323,29338907,C,Thupl.29338907s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006468,GO,protein phosphorylation
+Thupl.29346254s0002,29346254_78366,29346254,T,Thupl.29346254s0002.1.v3.1,Transcript,missense_variant,518,44,15,F/Y,tTc/tAc,GO:0003824,GO,catalytic activity
+Thupl.29346254s0002,29346254_78366,29346254,T,Thupl.29346254s0002.1.v3.1,Transcript,missense_variant,518,44,15,F/Y,tTc/tAc,GO:0008152,GO,metabolic process
+Thupl.29353611s0001,29353611_135685,29353611,C,Thupl.29353611s0001.1.v3.1,Transcript,3_prime_UTR_variant,1264,NA,NA,NA,NA,GO:0016972,GO,thiol oxidase activity
+Thupl.29353611s0001,29353611_135685,29353611,C,Thupl.29353611s0001.1.v3.1,Transcript,3_prime_UTR_variant,1264,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29365110s0001,29365110_81765,29365110,A,Thupl.29365110s0001.1.v3.1,Transcript,synonymous_variant,1578,177,59,S,tcC/tcT,GO:0004672,GO,protein kinase activity
+Thupl.29365110s0001,29365110_81765,29365110,A,Thupl.29365110s0001.1.v3.1,Transcript,synonymous_variant,1578,177,59,S,tcC/tcT,GO:0006468,GO,protein phosphorylation
+Thupl.29377006s0002,29377006_639591,29377006,T,Thupl.29377006s0002.1.v3.1,Transcript,3_prime_UTR_variant,1690,NA,NA,NA,NA,GO:0031072,GO,heat shock protein binding
+Thupl.29377006s0002,29377006_639591,29377006,T,Thupl.29377006s0002.1.v3.1,Transcript,3_prime_UTR_variant,1690,NA,NA,NA,NA,GO:0051082,GO,unfolded protein binding
+Thupl.29377051s0004,29377051_959810,29377051,G,Thupl.29377051s0004.1.v3.1,Transcript,synonymous_variant,368,108,36,N,aaT/aaC,GO:0006486,GO,protein glycosylation
+Thupl.29377051s0004,29377051_959810,29377051,G,Thupl.29377051s0004.1.v3.1,Transcript,synonymous_variant,368,108,36,N,aaT/aaC,GO:0016757,GO,"transferase activity, transferring glycosyl groups"
+Thupl.29377084s0015,29377084_2014601,29377084,T,Thupl.29377084s0015.1.v3.1,Transcript,3_prime_UTR_variant,2765,NA,NA,NA,NA,GO:0005215,GO,transporter activity
+Thupl.29377084s0015,29377084_2014601,29377084,T,Thupl.29377084s0015.1.v3.1,Transcript,3_prime_UTR_variant,2765,NA,NA,NA,NA,GO:0006810,GO,transport
+Thupl.29377084s0015,29377084_2014601,29377084,T,Thupl.29377084s0015.1.v3.1,Transcript,3_prime_UTR_variant,2765,NA,NA,NA,NA,GO:0016020,GO,membrane
+Thupl.29377152s0002,29377152_229813,29377152,A,Thupl.29377152s0002.1.v3.1,Transcript,synonymous_variant,1651,1335,445,S,tcC/tcT,GO:0003824,GO,catalytic activity
+Thupl.29377152s0002,29377152_229813,29377152,A,Thupl.29377152s0002.1.v3.1,Transcript,synonymous_variant,1651,1335,445,S,tcC/tcT,GO:0004722,GO,protein serine/threonine phosphatase activity
+Thupl.29377152s0002,29377152_229813,29377152,A,Thupl.29377152s0002.1.v3.1,Transcript,synonymous_variant,1651,1335,445,S,tcC/tcT,GO:0006470,GO,protein dephosphorylation
+Thupl.29377172s0006,29377172_2064914,29377172,C,Thupl.29377172s0006.1.v3.1,Transcript,missense_variant,145,145,49,Y/H,Tat/Cat,GO:0004672,GO,protein kinase activity
+Thupl.29377172s0006,29377172_2064914,29377172,C,Thupl.29377172s0006.1.v3.1,Transcript,missense_variant,145,145,49,Y/H,Tat/Cat,GO:0006468,GO,protein phosphorylation
+Thupl.29377225s0018,29377225_2857501,29377225,A,Thupl.29377225s0018.1.v3.1,Transcript,missense_variant,1483,1243,415,R/C,Cgt/Tgt,GO:0005524,GO,ATP binding
+Thupl.29377225s0018,29377225_2857501,29377225,A,Thupl.29377225s0018.1.v3.1,Transcript,missense_variant,1483,1243,415,R/C,Cgt/Tgt,GO:0016020,GO,membrane
+Thupl.29377225s0018,29377225_2857501,29377225,A,Thupl.29377225s0018.1.v3.1,Transcript,missense_variant,1483,1243,415,R/C,Cgt/Tgt,GO:0017038,GO,protein import
+Thupl.29377260s0007,29377260_1429620,29377260,A,Thupl.29377260s0007.1.v3.1,Transcript,missense_variant,424,218,73,P/L,cCg/cTg,GO:0003676,GO,nucleic acid binding
+Thupl.29377312s0019,29377312_1883645,29377312,A,Thupl.29377312s0019.1.v3.1,Transcript,missense_variant,250,229,77,D/N,Gac/Aac,GO:0003885,GO,"D-arabinono-1,4-lactone oxidase activity"
+Thupl.29377312s0019,29377312_1883645,29377312,A,Thupl.29377312s0019.1.v3.1,Transcript,missense_variant,250,229,77,D/N,Gac/Aac,GO:0016020,GO,membrane
+Thupl.29377312s0019,29377312_1883645,29377312,A,Thupl.29377312s0019.1.v3.1,Transcript,missense_variant,250,229,77,D/N,Gac/Aac,GO:0016491,GO,oxidoreductase activity
+Thupl.29377312s0019,29377312_1883645,29377312,A,Thupl.29377312s0019.1.v3.1,Transcript,missense_variant,250,229,77,D/N,Gac/Aac,GO:0050660,GO,flavin adenine dinucleotide binding
+Thupl.29377312s0019,29377312_1883645,29377312,A,Thupl.29377312s0019.1.v3.1,Transcript,missense_variant,250,229,77,D/N,Gac/Aac,GO:0055114,GO,oxidation-reduction process
+Thupl.29377349s0011,29377349_3455850,29377349,C,Thupl.29377349s0011.2.v3.1,Transcript,splice_region_variant,168,NA,NA,NA,NA,GO:0003676,GO,nucleic acid binding
+Thupl.29377349s0011,29377349_3455850,29377349,C,Thupl.29377349s0011.2.v3.1,Transcript,splice_region_variant,168,NA,NA,NA,NA,GO:0005524,GO,ATP binding
+Thupl.29377354s0004,29377354_1096435,29377354,C,Thupl.29377354s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005634,GO,nucleus
+Thupl.29377354s0004,29377354_1096435,29377354,C,Thupl.29377354s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006397,GO,mRNA processing
+Thupl.29377372s0001,29377372_11033,29377372,T,Thupl.29377372s0001.1.v3.1,Transcript,synonymous_variant,1287,1050,350,G,ggG/ggA,GO:0004190,GO,aspartic-type endopeptidase activity
+Thupl.29377372s0001,29377372_11033,29377372,T,Thupl.29377372s0001.1.v3.1,Transcript,synonymous_variant,1287,1050,350,G,ggG/ggA,GO:0006508,GO,proteolysis
+Thupl.29377376s0015,29377376_3214733,29377376,T,Thupl.29377376s0015.1.v3.1,Transcript,missense_variant,1181,916,306,R/C,Cgc/Tgc,GO:0000049,GO,tRNA binding
+Thupl.29377376s0015,29377376_3214733,29377376,T,Thupl.29377376s0015.1.v3.1,Transcript,missense_variant,1181,916,306,R/C,Cgc/Tgc,GO:0002098,GO,tRNA wobble uridine modification
+Thupl.29377376s0015,29377376_3214733,29377376,T,Thupl.29377376s0015.1.v3.1,Transcript,missense_variant,1181,916,306,R/C,Cgc/Tgc,GO:0034227,GO,tRNA thio-modification
+Thupl.29377464s0001,29377464_529146,29377464,C,Thupl.29377464s0001.1.v3.1,Transcript,missense_variant,1068,451,151,L/V,Ctt/Gtt,GO:0005515,GO,protein binding
+Thupl.29377537s0021,29377537_4285407,29377537,T,Thupl.29377537s0021.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0001104,GO,RNA polymerase II transcription cofactor activity
+Thupl.29377537s0021,29377537_4285407,29377537,T,Thupl.29377537s0021.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006357,GO,regulation of transcription from RNA polymerase II promoter
+Thupl.29377537s0021,29377537_4285407,29377537,T,Thupl.29377537s0021.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016592,GO,mediator complex
+Thupl.29377544s0009,29377544_1056547,29377544,G,Thupl.29377544s0009.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016021,GO,integral to membrane
+Thupl.29377606s0002,29377606_95865,29377606,C,Thupl.29377606s0002.1.v3.1,Transcript,synonymous_variant,1105,1068,356,A,gcA/gcG,GO:0005506,GO,iron ion binding
+Thupl.29377606s0002,29377606_95865,29377606,C,Thupl.29377606s0002.1.v3.1,Transcript,synonymous_variant,1105,1068,356,A,gcA/gcG,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29377606s0002,29377606_95865,29377606,C,Thupl.29377606s0002.1.v3.1,Transcript,synonymous_variant,1105,1068,356,A,gcA/gcG,GO:0020037,GO,heme binding
+Thupl.29377606s0002,29377606_95865,29377606,C,Thupl.29377606s0002.1.v3.1,Transcript,synonymous_variant,1105,1068,356,A,gcA/gcG,GO:0055114,GO,oxidation-reduction process
+Thupl.29377622s0002,29377622_684761,29377622,A,Thupl.29377622s0002.1.v3.1,Transcript,synonymous_variant,666,495,165,G,ggG/ggA,GO:0005506,GO,iron ion binding
+Thupl.29377622s0002,29377622_684761,29377622,A,Thupl.29377622s0002.1.v3.1,Transcript,synonymous_variant,666,495,165,G,ggG/ggA,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29377622s0002,29377622_684761,29377622,A,Thupl.29377622s0002.1.v3.1,Transcript,synonymous_variant,666,495,165,G,ggG/ggA,GO:0020037,GO,heme binding
+Thupl.29377622s0002,29377622_684761,29377622,A,Thupl.29377622s0002.1.v3.1,Transcript,synonymous_variant,666,495,165,G,ggG/ggA,GO:0055114,GO,oxidation-reduction process
+Thupl.29377711s0001,29377711_295022,29377711,C,Thupl.29377711s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005525,GO,GTP binding
+Thupl.29377723s0001,29377723_103031,29377723,C,Thupl.29377723s0001.1.v3.1,Transcript,missense_variant,1745,1717,573,S/A,Tcg/Gcg,GO:0005515,GO,protein binding
+Thupl.29377898s0001,29377898_51387,29377898,T,Thupl.29377898s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0000287,GO,magnesium ion binding
+Thupl.29377898s0001,29377898_51387,29377898,T,Thupl.29377898s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0004749,GO,ribose phosphate diphosphokinase activity
+Thupl.29377898s0001,29377898_51387,29377898,T,Thupl.29377898s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0009165,GO,nucleotide biosynthetic process
+Thupl.29377959s0003,29377959_1398047,29377959,T,Thupl.29377959s0003.1.v3.1,Transcript,missense_variant,1599,1412,471,G/V,gGa/gTa,GO:0004375,GO,glycine dehydrogenase (decarboxylating) activity
+Thupl.29377959s0003,29377959_1398047,29377959,T,Thupl.29377959s0003.1.v3.1,Transcript,missense_variant,1599,1412,471,G/V,gGa/gTa,GO:0006546,GO,glycine catabolic process
+Thupl.29377959s0003,29377959_1398047,29377959,T,Thupl.29377959s0003.1.v3.1,Transcript,missense_variant,1599,1412,471,G/V,gGa/gTa,GO:0055114,GO,oxidation-reduction process
+Thupl.29378023s0006,29378023_1778550,29378023,A,Thupl.29378023s0006.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0009055,GO,electron carrier activity
+Thupl.29378023s0006,29378023_1778550,29378023,A,Thupl.29378023s0006.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0015035,GO,protein disulfide oxidoreductase activity
+Thupl.29378023s0006,29378023_1778550,29378023,A,Thupl.29378023s0006.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0045454,GO,cell redox homeostasis
+Thupl.29378023s0008,29378023_2483923,29378023,T,Thupl.29378023s0008.1.v3.1,Transcript,missense_variant,676,398,133,S/N,aGc/aAc,GO:0006784,GO,heme a biosynthetic process
+Thupl.29378023s0008,29378023_2483923,29378023,T,Thupl.29378023s0008.1.v3.1,Transcript,missense_variant,676,398,133,S/N,aGc/aAc,GO:0016020,GO,membrane
+Thupl.29378023s0008,29378023_2483923,29378023,T,Thupl.29378023s0008.1.v3.1,Transcript,missense_variant,676,398,133,S/N,aGc/aAc,GO:0016021,GO,integral to membrane
+Thupl.29378023s0008,29378023_2483923,29378023,T,Thupl.29378023s0008.1.v3.1,Transcript,missense_variant,676,398,133,S/N,aGc/aAc,GO:0016627,GO,"oxidoreductase activity, acting on the CH-CH group of donors"
+Thupl.29378023s0008,29378023_2483923,29378023,T,Thupl.29378023s0008.1.v3.1,Transcript,missense_variant,676,398,133,S/N,aGc/aAc,GO:0055114,GO,oxidation-reduction process
+Thupl.29378039s0003,29378039_672463,29378039,C,Thupl.29378039s0003.1.v3.1,Transcript,synonymous_variant,246,246,82,T,acA/acG,GO:0003690,GO,double-stranded DNA binding
+Thupl.29378039s0003,29378039_672463,29378039,C,Thupl.29378039s0003.1.v3.1,Transcript,synonymous_variant,246,246,82,T,acA/acG,GO:0006355,GO,"regulation of transcription, DNA-dependent"
+Thupl.29378074s0004,29378074_1227239,29378074,C,Thupl.29378074s0004.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0003677,GO,DNA binding
+Thupl.29378074s0004,29378074_1227239,29378074,C,Thupl.29378074s0004.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0006355,GO,"regulation of transcription, DNA-dependent"
+Thupl.29378117s0008,29378117_964974,29378117,A,Thupl.29378117s0008.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0005506,GO,iron ion binding
+Thupl.29378117s0008,29378117_964974,29378117,A,Thupl.29378117s0008.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29378117s0008,29378117_964974,29378117,A,Thupl.29378117s0008.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0020037,GO,heme binding
+Thupl.29378117s0008,29378117_964974,29378117,A,Thupl.29378117s0008.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29378131s0027,29378131_5439066,29378131,G,Thupl.29378131s0027.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0005524,GO,ATP binding
+Thupl.29378131s0027,29378131_5439066,29378131,G,Thupl.29378131s0027.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0006810,GO,transport
+Thupl.29378131s0027,29378131_5439066,29378131,G,Thupl.29378131s0027.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0016021,GO,integral to membrane
+Thupl.29378131s0027,29378131_5439066,29378131,G,Thupl.29378131s0027.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0016887,GO,ATPase activity
+Thupl.29378131s0027,29378131_5439066,29378131,G,Thupl.29378131s0027.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0042626,GO,"ATPase activity, coupled to transmembrane movement of substances"
+Thupl.29378131s0027,29378131_5439066,29378131,G,Thupl.29378131s0027.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0055085,GO,transmembrane transport
+Thupl.29378133s0001,29378133_44550,29378133,A,Thupl.29378133s0001.1.v3.1,Transcript,synonymous_variant,2075,1236,412,R,agG/agA,GO:0004672,GO,protein kinase activity
+Thupl.29378133s0001,29378133_44550,29378133,A,Thupl.29378133s0001.1.v3.1,Transcript,synonymous_variant,2075,1236,412,R,agG/agA,GO:0006468,GO,protein phosphorylation
+Thupl.29378133s0001,29378133_44550,29378133,A,Thupl.29378133s0001.1.v3.1,Transcript,synonymous_variant,2075,1236,412,R,agG/agA,GO:0048544,GO,recognition of pollen
+Thupl.29378176s0002,29378176_1711897,29378176,G,Thupl.29378176s0002.1.v3.1,Transcript,missense_variant,1228,1087,363,H/D,Cat/Gat,GO:0004672,GO,protein kinase activity
+Thupl.29378176s0002,29378176_1711897,29378176,G,Thupl.29378176s0002.1.v3.1,Transcript,missense_variant,1228,1087,363,H/D,Cat/Gat,GO:0005524,GO,ATP binding
+Thupl.29378176s0002,29378176_1711897,29378176,G,Thupl.29378176s0002.1.v3.1,Transcript,missense_variant,1228,1087,363,H/D,Cat/Gat,GO:0006468,GO,protein phosphorylation
+Thupl.29378176s0002,29378176_1711897,29378176,G,Thupl.29378176s0002.1.v3.1,Transcript,missense_variant,1228,1087,363,H/D,Cat/Gat,GO:0048544,GO,recognition of pollen
+Thupl.29378212s0007,29378212_3526454,29378212,G,Thupl.29378212s0007.1.v3.1,Transcript,3_prime_UTR_variant,1373,NA,NA,NA,NA,GO:0006412,GO,translation
+Thupl.29378215s0006,29378215_1503883,29378215,T,Thupl.29378215s0006.1.v3.1,Transcript,missense_variant,130,130,44,V/M,Gtg/Atg,GO:0005506,GO,iron ion binding
+Thupl.29378215s0006,29378215_1503883,29378215,T,Thupl.29378215s0006.1.v3.1,Transcript,missense_variant,130,130,44,V/M,Gtg/Atg,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29378215s0006,29378215_1503883,29378215,T,Thupl.29378215s0006.1.v3.1,Transcript,missense_variant,130,130,44,V/M,Gtg/Atg,GO:0020037,GO,heme binding
+Thupl.29378215s0006,29378215_1503883,29378215,T,Thupl.29378215s0006.1.v3.1,Transcript,missense_variant,130,130,44,V/M,Gtg/Atg,GO:0055114,GO,oxidation-reduction process
+Thupl.29378215s0015,29378215_3771600,29378215,T,Thupl.29378215s0015.1.v3.1,Transcript,3_prime_UTR_variant,2324,NA,NA,NA,NA,GO:0016757,GO,"transferase activity, transferring glycosyl groups"
+Thupl.29378235s0003,29378235_544226,29378235,C,Thupl.29378235s0003.1.v3.1,Transcript,missense_variant,2114,1610,537,A/G,gCt/gGt,GO:0003676,GO,nucleic acid binding
+Thupl.29378235s0003,29378235_544226,29378235,C,Thupl.29378235s0003.1.v3.1,Transcript,missense_variant,2114,1610,537,A/G,gCt/gGt,GO:0003723,GO,RNA binding
+Thupl.29378313s0014,29378313_2564935,29378313,G,Thupl.29378313s0014.1.v3.1,Transcript,synonymous_variant,597,78,26,A,gcT/gcG,GO:0008641,GO,small protein activating enzyme activity
+Thupl.29378335s0001,29378335_128412,29378335,T,Thupl.29378335s0001.2.v3.1,Transcript,3_prime_UTR_variant,1315,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29378351s0005,29378351_2212392,29378351,G,Thupl.29378351s0005.1.v3.1,Transcript,synonymous_variant,728,490,164,L,Ttg/Ctg,GO:0003677,GO,DNA binding
+Thupl.29378351s0005,29378351_2212392,29378351,G,Thupl.29378351s0005.1.v3.1,Transcript,synonymous_variant,728,490,164,L,Ttg/Ctg,GO:0003899,GO,DNA-directed RNA polymerase activity
+Thupl.29378351s0005,29378351_2212392,29378351,G,Thupl.29378351s0005.1.v3.1,Transcript,synonymous_variant,728,490,164,L,Ttg/Ctg,GO:0006351,GO,"transcription, DNA-dependent"
+Thupl.29378351s0005,29378351_2212392,29378351,G,Thupl.29378351s0005.1.v3.1,Transcript,synonymous_variant,728,490,164,L,Ttg/Ctg,GO:0032549,GO,ribonucleoside binding
+Thupl.29378396s0029,29378396_4721398,29378396,G,Thupl.29378396s0029.1.v3.1,Transcript,3_prime_UTR_variant,1185,NA,NA,NA,NA,GO:0004601,GO,peroxidase activity
+Thupl.29378396s0029,29378396_4721398,29378396,G,Thupl.29378396s0029.1.v3.1,Transcript,3_prime_UTR_variant,1185,NA,NA,NA,NA,GO:0006979,GO,response to oxidative stress
+Thupl.29378396s0029,29378396_4721398,29378396,G,Thupl.29378396s0029.1.v3.1,Transcript,3_prime_UTR_variant,1185,NA,NA,NA,NA,GO:0020037,GO,heme binding
+Thupl.29378396s0029,29378396_4721398,29378396,G,Thupl.29378396s0029.1.v3.1,Transcript,3_prime_UTR_variant,1185,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29378410s0010,29378410_3043913,29378410,A,Thupl.29378410s0010.1.v3.1,Transcript,missense_variant,506,38,13,R/K,aGa/aAa,GO:0008152,GO,metabolic process
+Thupl.29378410s0010,29378410_3043913,29378410,A,Thupl.29378410s0010.1.v3.1,Transcript,missense_variant,506,38,13,R/K,aGa/aAa,GO:0008168,GO,methyltransferase activity
+Thupl.29378444s0010,29378444_1383860,29378444,A,Thupl.29378444s0010.1.v3.1,Transcript,3_prime_UTR_variant,1714,NA,NA,NA,NA,GO:0005506,GO,iron ion binding
+Thupl.29378444s0010,29378444_1383860,29378444,A,Thupl.29378444s0010.1.v3.1,Transcript,3_prime_UTR_variant,1714,NA,NA,NA,NA,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29378444s0010,29378444_1383860,29378444,A,Thupl.29378444s0010.1.v3.1,Transcript,3_prime_UTR_variant,1714,NA,NA,NA,NA,GO:0020037,GO,heme binding
+Thupl.29378444s0010,29378444_1383860,29378444,A,Thupl.29378444s0010.1.v3.1,Transcript,3_prime_UTR_variant,1714,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29378460s0006,29378460_972422,29378460,A,Thupl.29378460s0006.1.v3.1,Transcript,missense_variant,342,200,67,G/D,gGc/gAc,GO:0003824,GO,catalytic activity
+Thupl.29378460s0006,29378460_972422,29378460,A,Thupl.29378460s0006.1.v3.1,Transcript,missense_variant,342,200,67,G/D,gGc/gAc,GO:0008152,GO,metabolic process
+Thupl.29378478s0008,29378478_1029400,29378478,A,Thupl.29378478s0008.1.v3.1,Transcript,missense_variant,1510,1177,393,H/Y,Cat/Tat,GO:0005737,GO,cytoplasm
+Thupl.29378478s0008,29378478_1029400,29378478,A,Thupl.29378478s0008.1.v3.1,Transcript,missense_variant,1510,1177,393,H/Y,Cat/Tat,GO:0008734,GO,L-aspartate oxidase activity
+Thupl.29378478s0008,29378478_1029400,29378478,A,Thupl.29378478s0008.1.v3.1,Transcript,missense_variant,1510,1177,393,H/Y,Cat/Tat,GO:0009435,GO,NAD biosynthetic process
+Thupl.29378478s0008,29378478_1029400,29378478,A,Thupl.29378478s0008.1.v3.1,Transcript,missense_variant,1510,1177,393,H/Y,Cat/Tat,GO:0016491,GO,oxidoreductase activity
+Thupl.29378478s0008,29378478_1029400,29378478,A,Thupl.29378478s0008.1.v3.1,Transcript,missense_variant,1510,1177,393,H/Y,Cat/Tat,GO:0055114,GO,oxidation-reduction process
+Thupl.29378511s0017,29378511_1734665,29378511,A,Thupl.29378511s0017.1.v3.1,Transcript,missense_variant,304,92,31,G/D,gGt/gAt,GO:0003677,GO,DNA binding
+Thupl.29378511s0017,29378511_1734665,29378511,A,Thupl.29378511s0017.1.v3.1,Transcript,missense_variant,304,92,31,G/D,gGt/gAt,GO:0005634,GO,nucleus
+Thupl.29378519s0019,29378519_4903581,29378519,G,Thupl.29378519s0019.1.v3.1,Transcript,3_prime_UTR_variant,3067,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29378519s0019,29378519_4903581,29378519,G,Thupl.29378519s0019.1.v3.1,Transcript,3_prime_UTR_variant,3067,NA,NA,NA,NA,GO:0007165,GO,signal transduction
+Thupl.29378519s0019,29378519_4903581,29378519,G,Thupl.29378519s0019.1.v3.1,Transcript,3_prime_UTR_variant,3067,NA,NA,NA,NA,GO:0043531,GO,ADP binding
+Thupl.29378592s0009,29378592_1231507,29378592,T,Thupl.29378592s0009.1.v3.1,Transcript,synonymous_variant,2813,2427,809,S,tcT/tcA,GO:0005515,GO,protein binding
+Thupl.29378592s0009,29378592_1231507,29378592,T,Thupl.29378592s0009.1.v3.1,Transcript,synonymous_variant,2813,2427,809,S,tcT/tcA,GO:0006355,GO,"regulation of transcription, DNA-dependent"
+Thupl.29378621s0015,29378621_2923561,29378621,T,Thupl.29378621s0015.1.v3.1,Transcript,synonymous_variant,2887,2031,677,L,ctG/ctT,GO:0003779,GO,actin binding
+Thupl.29378621s0015,29378621_2923561,29378621,T,Thupl.29378621s0015.1.v3.1,Transcript,synonymous_variant,2887,2031,677,L,ctG/ctT,GO:0007010,GO,cytoskeleton organization
+Thupl.29378621s0015,29378621_2923561,29378621,T,Thupl.29378621s0015.1.v3.1,Transcript,synonymous_variant,2887,2031,677,L,ctG/ctT,GO:0051015,GO,actin filament binding
+Thupl.29378621s0015,29378621_2923561,29378621,T,Thupl.29378621s0015.1.v3.1,Transcript,synonymous_variant,2887,2031,677,L,ctG/ctT,GO:0051017,GO,actin filament bundle assembly
+Thupl.29378664s0015,29378664_3546007,29378664,T,Thupl.29378664s0015.1.v3.1,Transcript,missense_variant,1387,1117,373,V/I,Gta/Ata,GO:0016491,GO,oxidoreductase activity
+Thupl.29378664s0015,29378664_3546007,29378664,T,Thupl.29378664s0015.1.v3.1,Transcript,missense_variant,1387,1117,373,V/I,Gta/Ata,GO:0055114,GO,oxidation-reduction process
+Thupl.29378699s0008,29378699_1635377,29378699,C,Thupl.29378699s0008.1.v3.1,Transcript,missense_variant,2189,1633,545,W/R,Tgg/Cgg,GO:0004672,GO,protein kinase activity
+Thupl.29378699s0008,29378699_1635377,29378699,C,Thupl.29378699s0008.1.v3.1,Transcript,missense_variant,2189,1633,545,W/R,Tgg/Cgg,GO:0005524,GO,ATP binding
+Thupl.29378699s0008,29378699_1635377,29378699,C,Thupl.29378699s0008.1.v3.1,Transcript,missense_variant,2189,1633,545,W/R,Tgg/Cgg,GO:0006468,GO,protein phosphorylation
+Thupl.29378800s0009,29378800_1896006,29378800,C,Thupl.29378800s0009.1.v3.1,Transcript,stop_lost,2392,2392,798,*/Q,Tag/Cag,GO:0043531,GO,ADP binding
+Thupl.29378800s0012,29378800_2818208,29378800,T,Thupl.29378800s0012.1.v3.1,Transcript,missense_variant,488,25,9,G/S,Ggc/Agc,GO:0003924,GO,GTPase activity
+Thupl.29378800s0012,29378800_2818208,29378800,T,Thupl.29378800s0012.1.v3.1,Transcript,missense_variant,488,25,9,G/S,Ggc/Agc,GO:0005525,GO,GTP binding
+Thupl.29378800s0014,29378800_3668101,29378800,C,Thupl.29378800s0014.1.v3.1,Transcript,3_prime_UTR_variant,2252,NA,NA,NA,NA,GO:0004672,GO,protein kinase activity
+Thupl.29378800s0014,29378800_3668101,29378800,C,Thupl.29378800s0014.1.v3.1,Transcript,3_prime_UTR_variant,2252,NA,NA,NA,NA,GO:0005524,GO,ATP binding
+Thupl.29378800s0014,29378800_3668101,29378800,C,Thupl.29378800s0014.1.v3.1,Transcript,3_prime_UTR_variant,2252,NA,NA,NA,NA,GO:0006468,GO,protein phosphorylation
+Thupl.29378866s0005,29378866_881388,29378866,C,Thupl.29378866s0005.1.v3.1,Transcript,missense_variant,1121,707,236,I/S,aTt/aGt,GO:0005515,GO,protein binding
+Thupl.29378874s0007,29378874_718060,29378874,T,Thupl.29378874s0007.1.v3.1,Transcript,3_prime_UTR_variant,1272,NA,NA,NA,NA,GO:0003735,GO,structural constituent of ribosome
+Thupl.29378874s0007,29378874_718060,29378874,T,Thupl.29378874s0007.1.v3.1,Transcript,3_prime_UTR_variant,1272,NA,NA,NA,NA,GO:0005622,GO,intracellular
+Thupl.29378874s0007,29378874_718060,29378874,T,Thupl.29378874s0007.1.v3.1,Transcript,3_prime_UTR_variant,1272,NA,NA,NA,NA,GO:0005840,GO,ribosome
+Thupl.29378874s0007,29378874_718060,29378874,T,Thupl.29378874s0007.1.v3.1,Transcript,3_prime_UTR_variant,1272,NA,NA,NA,NA,GO:0006412,GO,translation
+Thupl.29378881s0002,29378881_628124,29378881,T,Thupl.29378881s0002.1.v3.1,Transcript,3_prime_UTR_variant,2087,NA,NA,NA,NA,GO:0003854,GO,3-beta-hydroxy-delta5-steroid dehydrogenase activity
+Thupl.29378881s0002,29378881_628124,29378881,T,Thupl.29378881s0002.1.v3.1,Transcript,3_prime_UTR_variant,2087,NA,NA,NA,NA,GO:0006694,GO,steroid biosynthetic process
+Thupl.29378881s0002,29378881_628124,29378881,T,Thupl.29378881s0002.1.v3.1,Transcript,3_prime_UTR_variant,2087,NA,NA,NA,NA,GO:0016616,GO,"oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor"
+Thupl.29378881s0002,29378881_628124,29378881,T,Thupl.29378881s0002.1.v3.1,Transcript,3_prime_UTR_variant,2087,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29378936s0008,29378936_568566,29378936,G,Thupl.29378936s0008.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0003700,GO,sequence-specific DNA binding transcription factor activity
+Thupl.29378936s0008,29378936_568566,29378936,G,Thupl.29378936s0008.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0006355,GO,"regulation of transcription, DNA-dependent"
+Thupl.29379024s0008,29379024_3779667,29379024,G,Thupl.29379024s0008.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016627,GO,"oxidoreductase activity, acting on the CH-CH group of donors"
+Thupl.29379058s0014,29379058_2661620,29379058,T,Thupl.29379058s0014.1.v3.1,Transcript,synonymous_variant,917,603,201,G,ggT/ggA,GO:0005506,GO,iron ion binding
+Thupl.29379058s0014,29379058_2661620,29379058,T,Thupl.29379058s0014.1.v3.1,Transcript,synonymous_variant,917,603,201,G,ggT/ggA,GO:0016226,GO,iron-sulfur cluster assembly
+Thupl.29379058s0014,29379058_2661620,29379058,T,Thupl.29379058s0014.1.v3.1,Transcript,synonymous_variant,917,603,201,G,ggT/ggA,GO:0051536,GO,iron-sulfur cluster binding
+Thupl.29379374s0006,29379374_994682,29379374,C,Thupl.29379374s0006.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29379405s0004,29379405_1322705,29379405,G,Thupl.29379405s0004.1.v3.1,Transcript,missense_variant,4638,3536,1179,V/A,gTg/gCg,GO:0003777,GO,microtubule motor activity
+Thupl.29379405s0004,29379405_1322705,29379405,G,Thupl.29379405s0004.1.v3.1,Transcript,missense_variant,4638,3536,1179,V/A,gTg/gCg,GO:0005515,GO,protein binding
+Thupl.29379405s0004,29379405_1322705,29379405,G,Thupl.29379405s0004.1.v3.1,Transcript,missense_variant,4638,3536,1179,V/A,gTg/gCg,GO:0005524,GO,ATP binding
+Thupl.29379405s0004,29379405_1322705,29379405,G,Thupl.29379405s0004.1.v3.1,Transcript,missense_variant,4638,3536,1179,V/A,gTg/gCg,GO:0007018,GO,microtubule-based movement
+Thupl.29379405s0004,29379405_1322705,29379405,G,Thupl.29379405s0004.1.v3.1,Transcript,missense_variant,4638,3536,1179,V/A,gTg/gCg,GO:0008017,GO,microtubule binding
+Thupl.29379417s0002,29379417_827230,29379417,T,Thupl.29379417s0002.1.v3.1,Transcript,3_prime_UTR_variant,804,NA,NA,NA,NA,GO:0003735,GO,structural constituent of ribosome
+Thupl.29379417s0002,29379417_827230,29379417,T,Thupl.29379417s0002.1.v3.1,Transcript,3_prime_UTR_variant,804,NA,NA,NA,NA,GO:0005840,GO,ribosome
+Thupl.29379417s0002,29379417_827230,29379417,T,Thupl.29379417s0002.1.v3.1,Transcript,3_prime_UTR_variant,804,NA,NA,NA,NA,GO:0006412,GO,translation
+Thupl.29379479s0006,29379479_1068447,29379479,A,Thupl.29379479s0006.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005525,GO,GTP binding
+Thupl.29379489s0001,29379489_59566,29379489,T,Thupl.29379489s0001.1.v3.1,Transcript,synonymous_variant,1704,1197,399,P,ccA/ccT,GO:0016614,GO,"oxidoreductase activity, acting on CH-OH group of donors"
+Thupl.29379489s0001,29379489_59566,29379489,T,Thupl.29379489s0001.1.v3.1,Transcript,synonymous_variant,1704,1197,399,P,ccA/ccT,GO:0050660,GO,flavin adenine dinucleotide binding
+Thupl.29379489s0001,29379489_59566,29379489,T,Thupl.29379489s0001.1.v3.1,Transcript,synonymous_variant,1704,1197,399,P,ccA/ccT,GO:0055114,GO,oxidation-reduction process
+Thupl.29379507s0001,29379507_97290,29379507,T,Thupl.29379507s0001.1.v3.1,Transcript,synonymous_variant,1782,1755,585,T,acA/acT,GO:0004672,GO,protein kinase activity
+Thupl.29379507s0001,29379507_97290,29379507,T,Thupl.29379507s0001.1.v3.1,Transcript,synonymous_variant,1782,1755,585,T,acA/acT,GO:0005524,GO,ATP binding
+Thupl.29379507s0001,29379507_97290,29379507,T,Thupl.29379507s0001.1.v3.1,Transcript,synonymous_variant,1782,1755,585,T,acA/acT,GO:0006468,GO,protein phosphorylation
+Thupl.29379507s0001,29379507_97290,29379507,T,Thupl.29379507s0001.1.v3.1,Transcript,synonymous_variant,1782,1755,585,T,acA/acT,GO:0030247,GO,polysaccharide binding
+Thupl.29379616s0004,29379616_426647,29379616,G,Thupl.29379616s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29379630s0036,29379630_7561338,29379630,A,Thupl.29379630s0036.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0004672,GO,protein kinase activity
+Thupl.29379630s0036,29379630_7561338,29379630,A,Thupl.29379630s0036.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29379630s0036,29379630_7561338,29379630,A,Thupl.29379630s0036.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0005524,GO,ATP binding
+Thupl.29379630s0036,29379630_7561338,29379630,A,Thupl.29379630s0036.1.v3.1,Transcript,splice_region_variant,NA,NA,NA,NA,NA,GO:0006468,GO,protein phosphorylation
+Thupl.29379723s0004,29379723_961074,29379723,G,Thupl.29379723s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29379751s0004,29379751_544352,29379751,C,Thupl.29379751s0004.1.v3.1,Transcript,missense_variant,835,803,268,R/T,aGa/aCa,GO:0016491,GO,oxidoreductase activity
+Thupl.29379751s0004,29379751_544352,29379751,C,Thupl.29379751s0004.1.v3.1,Transcript,missense_variant,835,803,268,R/T,aGa/aCa,GO:0055114,GO,oxidation-reduction process
+Thupl.29379753s0018,29379753_4353699,29379753,T,Thupl.29379753s0018.1.v3.1,Transcript,3_prime_UTR_variant,3249,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29379753s0018,29379753_4353699,29379753,T,Thupl.29379753s0018.1.v3.1,Transcript,3_prime_UTR_variant,3249,NA,NA,NA,NA,GO:0005634,GO,nucleus
+Thupl.29379753s0018,29379753_4353699,29379753,T,Thupl.29379753s0018.1.v3.1,Transcript,3_prime_UTR_variant,3249,NA,NA,NA,NA,GO:0008270,GO,zinc ion binding
+Thupl.29379753s0018,29379753_4353699,29379753,T,Thupl.29379753s0018.1.v3.1,Transcript,3_prime_UTR_variant,3249,NA,NA,NA,NA,GO:0018024,GO,histone-lysine N-methyltransferase activity
+Thupl.29379753s0018,29379753_4353699,29379753,T,Thupl.29379753s0018.1.v3.1,Transcript,3_prime_UTR_variant,3249,NA,NA,NA,NA,GO:0034968,GO,histone lysine methylation
+Thupl.29379907s0004,29379907_477168,29379907,T,Thupl.29379907s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0000148,GO,"1,3-beta-D-glucan synthase complex"
+Thupl.29379907s0004,29379907_477168,29379907,T,Thupl.29379907s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0003843,GO,"1,3-beta-D-glucan synthase activity"
+Thupl.29379907s0004,29379907_477168,29379907,T,Thupl.29379907s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006075,GO,(1->3)-beta-D-glucan biosynthetic process
+Thupl.29379907s0004,29379907_477168,29379907,T,Thupl.29379907s0004.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016020,GO,membrane
+Thupl.29379948s0014,29379948_4403636,29379948,T,Thupl.29379948s0014.1.v3.1,Transcript,missense_variant,1297,380,127,S/F,tCt/tTt,GO:0008375,GO,acetylglucosaminyltransferase activity
+Thupl.29379948s0014,29379948_4403636,29379948,T,Thupl.29379948s0014.1.v3.1,Transcript,missense_variant,1297,380,127,S/F,tCt/tTt,GO:0016020,GO,membrane
+Thupl.29379968s0004,29379968_771714,29379968,C,Thupl.29379968s0004.1.v3.1,Transcript,3_prime_UTR_variant,1603,NA,NA,NA,NA,GO:0003899,GO,DNA-directed RNA polymerase activity
+Thupl.29379968s0004,29379968_771714,29379968,C,Thupl.29379968s0004.1.v3.1,Transcript,3_prime_UTR_variant,1603,NA,NA,NA,NA,GO:0006383,GO,transcription from RNA polymerase III promoter
+Thupl.29380021s0011,29380021_1439406,29380021,G,Thupl.29380021s0011.1.v3.1,Transcript,synonymous_variant,539,201,67,D,gaT/gaC,GO:0005783,GO,endoplasmic reticulum
+Thupl.29380021s0011,29380021_1439406,29380021,G,Thupl.29380021s0011.1.v3.1,Transcript,synonymous_variant,539,201,67,D,gaT/gaC,GO:0048193,GO,Golgi vesicle transport
+Thupl.29380066s0004,29380066_329102,29380066,T,Thupl.29380066s0004.1.v3.1,Transcript,missense_variant,2424,1052,351,V/E,gTg/gAg,GO:0005515,GO,protein binding
+Thupl.29380114s0004,29380114_452453,29380114,T,Thupl.29380114s0004.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0004672,GO,protein kinase activity
+Thupl.29380114s0004,29380114_452453,29380114,T,Thupl.29380114s0004.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0005524,GO,ATP binding
+Thupl.29380114s0004,29380114_452453,29380114,T,Thupl.29380114s0004.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0006468,GO,protein phosphorylation
+Thupl.29380212s0010,29380212_3534800,29380212,A,Thupl.29380212s0010.1.v3.1,Transcript,missense_variant,2266,1956,652,D/E,gaC/gaA,GO:0005515,GO,protein binding
+Thupl.29380212s0010,29380212_3534800,29380212,A,Thupl.29380212s0010.1.v3.1,Transcript,missense_variant,2266,1956,652,D/E,gaC/gaA,GO:0007165,GO,signal transduction
+Thupl.29380212s0010,29380212_3534800,29380212,A,Thupl.29380212s0010.1.v3.1,Transcript,missense_variant,2266,1956,652,D/E,gaC/gaA,GO:0043531,GO,ADP binding
+Thupl.29380217s0009,29380217_1521201,29380217,G,Thupl.29380217s0009.1.v3.1,Transcript,synonymous_variant,508,348,116,E,gaA/gaG,GO:0007023,GO,post-chaperonin tubulin folding pathway
+Thupl.29380217s0009,29380217_1521201,29380217,G,Thupl.29380217s0009.1.v3.1,Transcript,synonymous_variant,508,348,116,E,gaA/gaG,GO:0015631,GO,tubulin binding
+Thupl.29380313s0001,29380313_393047,29380313,A,Thupl.29380313s0001.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0004452,GO,isopentenyl-diphosphate delta-isomerase activity
+Thupl.29380313s0001,29380313_393047,29380313,A,Thupl.29380313s0001.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0008299,GO,isoprenoid biosynthetic process
+Thupl.29380313s0001,29380313_393047,29380313,A,Thupl.29380313s0001.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0016787,GO,hydrolase activity
+Thupl.29380412s0003,29380412_1052284,29380412,C,Thupl.29380412s0003.1.v3.1,Transcript,missense_variant,1426,1385,462,I/T,aTc/aCc,GO:0003993,GO,acid phosphatase activity
+Thupl.29380412s0003,29380412_1052284,29380412,C,Thupl.29380412s0003.1.v3.1,Transcript,missense_variant,1426,1385,462,I/T,aTc/aCc,GO:0016787,GO,hydrolase activity
+Thupl.29380412s0003,29380412_1052284,29380412,C,Thupl.29380412s0003.1.v3.1,Transcript,missense_variant,1426,1385,462,I/T,aTc/aCc,GO:0046872,GO,metal ion binding
+Thupl.29380433s0001,29380433_363491,29380433,G,Thupl.29380433s0001.1.v3.1,Transcript,5_prime_UTR_variant,849,NA,NA,NA,NA,GO:0015095,GO,magnesium ion transmembrane transporter activity
+Thupl.29380433s0001,29380433_363491,29380433,G,Thupl.29380433s0001.1.v3.1,Transcript,5_prime_UTR_variant,849,NA,NA,NA,NA,GO:0015693,GO,magnesium ion transport
+Thupl.29380433s0001,29380433_363491,29380433,G,Thupl.29380433s0001.1.v3.1,Transcript,5_prime_UTR_variant,849,NA,NA,NA,NA,GO:0016021,GO,integral to membrane
+Thupl.29380468s0017,29380468_3330058,29380468,G,Thupl.29380468s0017.1.v3.1,Transcript,missense_variant,823,617,206,Y/S,tAc/tCc,GO:0003743,GO,translation initiation factor activity
+Thupl.29380468s0017,29380468_3330058,29380468,G,Thupl.29380468s0017.1.v3.1,Transcript,missense_variant,823,617,206,Y/S,tAc/tCc,GO:0005515,GO,protein binding
+Thupl.29380468s0017,29380468_3330058,29380468,G,Thupl.29380468s0017.1.v3.1,Transcript,missense_variant,823,617,206,Y/S,tAc/tCc,GO:0005737,GO,cytoplasm
+Thupl.29380468s0017,29380468_3330058,29380468,G,Thupl.29380468s0017.1.v3.1,Transcript,missense_variant,823,617,206,Y/S,tAc/tCc,GO:0005852,GO,eukaryotic translation initiation factor 3 complex
+Thupl.29380533s0002,29380533_141720,29380533,T,Thupl.29380533s0002.1.v3.1,Transcript,missense_variant,2532,2394,798,N/K,aaC/aaA,GO:0005515,GO,protein binding
+Thupl.29380533s0002,29380533_141720,29380533,T,Thupl.29380533s0002.1.v3.1,Transcript,missense_variant,2532,2394,798,N/K,aaC/aaA,GO:0007165,GO,signal transduction
+Thupl.29380533s0002,29380533_141720,29380533,T,Thupl.29380533s0002.1.v3.1,Transcript,missense_variant,2532,2394,798,N/K,aaC/aaA,GO:0043531,GO,ADP binding
+Thupl.29380533s0007,29380533_1365708,29380533,A,Thupl.29380533s0007.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0005506,GO,iron ion binding
+Thupl.29380533s0007,29380533_1365708,29380533,A,Thupl.29380533s0007.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29380533s0007,29380533_1365708,29380533,A,Thupl.29380533s0007.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0020037,GO,heme binding
+Thupl.29380533s0007,29380533_1365708,29380533,A,Thupl.29380533s0007.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29380684s0004,29380684_520364,29380684,G,Thupl.29380684s0004.1.v3.1,Transcript,synonymous_variant,2737,2661,887,L,ttA/ttG,GO:0004386,GO,helicase activity
+Thupl.29380712s0019,29380712_2837351,29380712,T,Thupl.29380712s0019.1.v3.1,Transcript,missense_variant,1128,616,206,L/I,Ctt/Att,GO:0005515,GO,protein binding
+Thupl.29380857s0013,29380857_2989363,29380857,T,Thupl.29380857s0013.1.v3.1,Transcript,missense_variant,412,320,107,A/V,gCt/gTt,GO:0003676,GO,nucleic acid binding
+Thupl.29380891s0004,29380891_983844,29380891,A,Thupl.29380891s0004.1.v3.1,Transcript,missense_variant,2215,1818,606,R/S,agA/agT,GO:0004843,GO,cysteine-type deubiquitinase activity
+Thupl.29380891s0004,29380891_983844,29380891,A,Thupl.29380891s0004.1.v3.1,Transcript,missense_variant,2215,1818,606,R/S,agA/agT,GO:0016579,GO,protein deubiquitination
+Thupl.29380919s0004,29380919_902629,29380919,T,Thupl.29380919s0004.1.v3.1,Transcript,synonymous_variant,2507,1221,407,T,acG/acA,GO:0004672,GO,protein kinase activity
+Thupl.29380919s0004,29380919_902629,29380919,T,Thupl.29380919s0004.1.v3.1,Transcript,synonymous_variant,2507,1221,407,T,acG/acA,GO:0005515,GO,protein binding
+Thupl.29380919s0004,29380919_902629,29380919,T,Thupl.29380919s0004.1.v3.1,Transcript,synonymous_variant,2507,1221,407,T,acG/acA,GO:0005524,GO,ATP binding
+Thupl.29380919s0004,29380919_902629,29380919,T,Thupl.29380919s0004.1.v3.1,Transcript,synonymous_variant,2507,1221,407,T,acG/acA,GO:0006468,GO,protein phosphorylation
+Thupl.29380949s0002,29380949_272567,29380949,T,Thupl.29380949s0002.1.v3.1,Transcript,missense_variant,453,109,37,A/T,Gca/Aca,GO:0004559,GO,alpha-mannosidase activity
+Thupl.29380949s0002,29380949_272567,29380949,T,Thupl.29380949s0002.1.v3.1,Transcript,missense_variant,453,109,37,A/T,Gca/Aca,GO:0006013,GO,mannose metabolic process
+Thupl.29380982s0003,29380982_872271,29380982,A,Thupl.29380982s0003.1.v3.1,Transcript,5_prime_UTR_variant,186,NA,NA,NA,NA,GO:0003872,GO,6-phosphofructokinase activity
+Thupl.29380982s0003,29380982_872271,29380982,A,Thupl.29380982s0003.1.v3.1,Transcript,5_prime_UTR_variant,186,NA,NA,NA,NA,GO:0006096,GO,glycolysis
+Thupl.29381073s0006,29381073_1119878,29381073,T,Thupl.29381073s0006.1.v3.1,Transcript,synonymous_variant,2467,2292,764,Q,caG/caA,GO:0003676,GO,nucleic acid binding
+Thupl.29381073s0006,29381073_1119878,29381073,T,Thupl.29381073s0006.1.v3.1,Transcript,synonymous_variant,2467,2292,764,Q,caG/caA,GO:0005524,GO,ATP binding
+Thupl.29381082s0015,29381082_1503220,29381082,G,Thupl.29381082s0015.1.v3.1,Transcript,synonymous_variant,72,72,24,H,caT/caC,GO:0003676,GO,nucleic acid binding
+Thupl.29381105s0008,29381105_611129,29381105,T,Thupl.29381105s0008.1.v3.1,Transcript,missense_variant,4708,4535,1512,K/M,aAg/aTg,GO:0005524,GO,ATP binding
+Thupl.29381105s0008,29381105_611129,29381105,T,Thupl.29381105s0008.1.v3.1,Transcript,missense_variant,4708,4535,1512,K/M,aAg/aTg,GO:0006810,GO,transport
+Thupl.29381105s0008,29381105_611129,29381105,T,Thupl.29381105s0008.1.v3.1,Transcript,missense_variant,4708,4535,1512,K/M,aAg/aTg,GO:0016021,GO,integral to membrane
+Thupl.29381105s0008,29381105_611129,29381105,T,Thupl.29381105s0008.1.v3.1,Transcript,missense_variant,4708,4535,1512,K/M,aAg/aTg,GO:0016887,GO,ATPase activity
+Thupl.29381105s0008,29381105_611129,29381105,T,Thupl.29381105s0008.1.v3.1,Transcript,missense_variant,4708,4535,1512,K/M,aAg/aTg,GO:0042626,GO,"ATPase activity, coupled to transmembrane movement of substances"
+Thupl.29381105s0008,29381105_611129,29381105,T,Thupl.29381105s0008.1.v3.1,Transcript,missense_variant,4708,4535,1512,K/M,aAg/aTg,GO:0055085,GO,transmembrane transport
+Thupl.29381166s0006,29381166_777449,29381166,A,Thupl.29381166s0006.1.v3.1,Transcript,missense_variant,2320,1978,660,Q/K,Caa/Aaa,GO:0043531,GO,ADP binding
+Thupl.29381236s0001,29381236_286220,29381236,T,Thupl.29381236s0001.1.v3.1,Transcript,5_prime_UTR_variant,229,NA,NA,NA,NA,GO:0006364,GO,rRNA processing
+Thupl.29381236s0001,29381236_286220,29381236,T,Thupl.29381236s0001.1.v3.1,Transcript,5_prime_UTR_variant,229,NA,NA,NA,NA,GO:0032040,GO,small-subunit processome
+Thupl.29381344s0012,29381344_1187809,29381344,C,Thupl.29381344s0012.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0004601,GO,peroxidase activity
+Thupl.29381344s0012,29381344_1187809,29381344,C,Thupl.29381344s0012.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0006979,GO,response to oxidative stress
+Thupl.29381344s0012,29381344_1187809,29381344,C,Thupl.29381344s0012.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0020037,GO,heme binding
+Thupl.29381344s0012,29381344_1187809,29381344,C,Thupl.29381344s0012.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29381388s0004,29381388_239781,29381388,A,Thupl.29381388s0004.1.v3.1,Transcript,synonymous_variant,150,69,23,G,ggC/ggT,GO:0008152,GO,metabolic process
+Thupl.29381388s0004,29381388_239781,29381388,A,Thupl.29381388s0004.1.v3.1,Transcript,synonymous_variant,150,69,23,G,ggC/ggT,GO:0016616,GO,"oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor"
+Thupl.29381388s0004,29381388_239781,29381388,A,Thupl.29381388s0004.1.v3.1,Transcript,synonymous_variant,150,69,23,G,ggC/ggT,GO:0051287,GO,NAD binding
+Thupl.29381388s0004,29381388_239781,29381388,A,Thupl.29381388s0004.1.v3.1,Transcript,synonymous_variant,150,69,23,G,ggC/ggT,GO:0055114,GO,oxidation-reduction process
+Thupl.29381403s0019,29381403_2600472,29381403,T,Thupl.29381403s0019.1.v3.1,Transcript,synonymous_variant,1172,729,243,D,gaC/gaT,GO:0016020,GO,membrane
+Thupl.29381471s0007,29381471_517939,29381471,T,Thupl.29381471s0007.1.v3.1,Transcript,missense_variant,729,661,221,R/C,Cgc/Tgc,GO:0008171,GO,O-methyltransferase activity
+Thupl.29381471s0007,29381471_517939,29381471,T,Thupl.29381471s0007.1.v3.1,Transcript,missense_variant,729,661,221,R/C,Cgc/Tgc,GO:0046983,GO,protein dimerization activity
+Thupl.29381478s0006,29381478_1182482,29381478,A,Thupl.29381478s0006.1.v3.1,Transcript,missense_variant,3207,2662,888,Q/K,Caa/Aaa,GO:0000287,GO,magnesium ion binding
+Thupl.29381478s0006,29381478_1182482,29381478,A,Thupl.29381478s0006.1.v3.1,Transcript,missense_variant,3207,2662,888,Q/K,Caa/Aaa,GO:0004012,GO,phospholipid-translocating ATPase activity
+Thupl.29381478s0006,29381478_1182482,29381478,A,Thupl.29381478s0006.1.v3.1,Transcript,missense_variant,3207,2662,888,Q/K,Caa/Aaa,GO:0005524,GO,ATP binding
+Thupl.29381478s0006,29381478_1182482,29381478,A,Thupl.29381478s0006.1.v3.1,Transcript,missense_variant,3207,2662,888,Q/K,Caa/Aaa,GO:0015914,GO,phospholipid transport
+Thupl.29381478s0006,29381478_1182482,29381478,A,Thupl.29381478s0006.1.v3.1,Transcript,missense_variant,3207,2662,888,Q/K,Caa/Aaa,GO:0016021,GO,integral to membrane
+Thupl.29381500s0009,29381500_2652205,29381500,G,Thupl.29381500s0009.1.v3.1,Transcript,synonymous_variant,2321,2196,732,A,gcG/gcC,GO:0004672,GO,protein kinase activity
+Thupl.29381500s0009,29381500_2652205,29381500,G,Thupl.29381500s0009.1.v3.1,Transcript,synonymous_variant,2321,2196,732,A,gcG/gcC,GO:0005524,GO,ATP binding
+Thupl.29381500s0009,29381500_2652205,29381500,G,Thupl.29381500s0009.1.v3.1,Transcript,synonymous_variant,2321,2196,732,A,gcG/gcC,GO:0006468,GO,protein phosphorylation
+Thupl.29381500s0009,29381500_2652205,29381500,G,Thupl.29381500s0009.1.v3.1,Transcript,synonymous_variant,2321,2196,732,A,gcG/gcC,GO:0048544,GO,recognition of pollen
+Thupl.29381515s0002,29381515_59785,29381515,A,Thupl.29381515s0002.1.v3.1,Transcript,synonymous_variant,607,561,187,P,ccG/ccA,GO:0016788,GO,"hydrolase activity, acting on ester bonds"
+Thupl.29381722s0026,29381722_2669933,29381722,C,Thupl.29381722s0026.1.v3.1,Transcript,synonymous_variant,504,327,109,G,ggT/ggC,GO:0005524,GO,ATP binding
+Thupl.29381738s0033,29381738_3162355,29381738,A,Thupl.29381738s0033.2.v3.1,Transcript,3_prime_UTR_variant,1450,NA,NA,NA,NA,GO:0006508,GO,proteolysis
+Thupl.29381738s0033,29381738_3162355,29381738,A,Thupl.29381738s0033.2.v3.1,Transcript,3_prime_UTR_variant,1450,NA,NA,NA,NA,GO:0008236,GO,serine-type peptidase activity
+Thupl.29381804s0011,29381804_2905275,29381804,T,Thupl.29381804s0011.1.v3.1,Transcript,missense_variant,1626,1379,460,T/I,aCa/aTa,GO:0008152,GO,metabolic process
+Thupl.29381804s0011,29381804_2905275,29381804,T,Thupl.29381804s0011.1.v3.1,Transcript,missense_variant,1626,1379,460,T/I,aCa/aTa,GO:0016491,GO,oxidoreductase activity
+Thupl.29381804s0011,29381804_2905275,29381804,T,Thupl.29381804s0011.1.v3.1,Transcript,missense_variant,1626,1379,460,T/I,aCa/aTa,GO:0055114,GO,oxidation-reduction process
+Thupl.29381881s0012,29381881_2615778,29381881,G,Thupl.29381881s0012.1.v3.1,Transcript,missense_variant,9434,9026,3009,E/G,gAg/gGg,GO:0008270,GO,zinc ion binding
+Thupl.29381890s0009,29381890_2613775,29381890,C,Thupl.29381890s0009.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0004672,GO,protein kinase activity
+Thupl.29381890s0009,29381890_2613775,29381890,C,Thupl.29381890s0009.1.v3.1,Transcript,upstream_gene_variant,NA,NA,NA,NA,NA,GO:0006468,GO,protein phosphorylation
+Thupl.29381925s0013,29381925_2053383,29381925,G,Thupl.29381925s0013.1.v3.1,Transcript,synonymous_variant,792,486,162,L,ctA/ctC,GO:0005506,GO,iron ion binding
+Thupl.29381925s0013,29381925_2053383,29381925,G,Thupl.29381925s0013.1.v3.1,Transcript,synonymous_variant,792,486,162,L,ctA/ctC,GO:0016705,GO,"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+Thupl.29381925s0013,29381925_2053383,29381925,G,Thupl.29381925s0013.1.v3.1,Transcript,synonymous_variant,792,486,162,L,ctA/ctC,GO:0020037,GO,heme binding
+Thupl.29381925s0013,29381925_2053383,29381925,G,Thupl.29381925s0013.1.v3.1,Transcript,synonymous_variant,792,486,162,L,ctA/ctC,GO:0055114,GO,oxidation-reduction process
+Thupl.29381929s0007,29381929_2721783,29381929,T,Thupl.29381929s0007.1.v3.1,Transcript,synonymous_variant,147,72,24,L,ctA/ctT,GO:0005737,GO,cytoplasm
+Thupl.29381929s0007,29381929_2721783,29381929,T,Thupl.29381929s0007.1.v3.1,Transcript,synonymous_variant,147,72,24,L,ctA/ctT,GO:0006457,GO,protein folding
+Thupl.29381992s0003,29381992_376380,29381992,T,Thupl.29381992s0003.1.v3.1,Transcript,5_prime_UTR_variant,303,NA,NA,NA,NA,GO:0004672,GO,protein kinase activity
+Thupl.29381992s0003,29381992_376380,29381992,T,Thupl.29381992s0003.1.v3.1,Transcript,5_prime_UTR_variant,303,NA,NA,NA,NA,GO:0006468,GO,protein phosphorylation
+Thupl.29382020s0001,29382020_42406,29382020,A,Thupl.29382020s0001.1.v3.1,Transcript,5_prime_UTR_variant,124,NA,NA,NA,NA,GO:0003676,GO,nucleic acid binding
+Thupl.29382035s0005,29382035_526396,29382035,T,Thupl.29382035s0005.1.v3.1,Transcript,synonymous_variant,428,216,72,I,atA/atT,GO:0003735,GO,structural constituent of ribosome
+Thupl.29382035s0005,29382035_526396,29382035,T,Thupl.29382035s0005.1.v3.1,Transcript,synonymous_variant,428,216,72,I,atA/atT,GO:0005622,GO,intracellular
+Thupl.29382035s0005,29382035_526396,29382035,T,Thupl.29382035s0005.1.v3.1,Transcript,synonymous_variant,428,216,72,I,atA/atT,GO:0005840,GO,ribosome
+Thupl.29382035s0005,29382035_526396,29382035,T,Thupl.29382035s0005.1.v3.1,Transcript,synonymous_variant,428,216,72,I,atA/atT,GO:0006412,GO,translation
+Thupl.29382040s0026,29382040_3558073,29382040,T,Thupl.29382040s0026.1.v3.1,Transcript,synonymous_variant,209,165,55,S,tcC/tcT,GO:0006801,GO,superoxide metabolic process
+Thupl.29382040s0026,29382040_3558073,29382040,T,Thupl.29382040s0026.1.v3.1,Transcript,synonymous_variant,209,165,55,S,tcC/tcT,GO:0030001,GO,metal ion transport
+Thupl.29382040s0026,29382040_3558073,29382040,T,Thupl.29382040s0026.1.v3.1,Transcript,synonymous_variant,209,165,55,S,tcC/tcT,GO:0046872,GO,metal ion binding
+Thupl.29382042s0004,29382042_729666,29382042,G,Thupl.29382042s0004.1.v3.1,Transcript,synonymous_variant,1553,1098,366,D,gaT/gaC,GO:0005515,GO,protein binding
+Thupl.29382042s0004,29382042_729666,29382042,G,Thupl.29382042s0004.1.v3.1,Transcript,synonymous_variant,1553,1098,366,D,gaT/gaC,GO:0005524,GO,ATP binding
+Thupl.29382042s0004,29382042_729666,29382042,G,Thupl.29382042s0004.1.v3.1,Transcript,synonymous_variant,1553,1098,366,D,gaT/gaC,GO:0019538,GO,protein metabolic process
+Thupl.29382050s0004,29382050_2646075,29382050,G,Thupl.29382050s0004.1.v3.1,Transcript,missense_variant,751,751,251,F/L,Ttt/Ctt,GO:0005975,GO,carbohydrate metabolic process
+Thupl.29382050s0004,29382050_2646075,29382050,G,Thupl.29382050s0004.1.v3.1,Transcript,missense_variant,751,751,251,F/L,Ttt/Ctt,GO:0016853,GO,isomerase activity
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0000166,GO,nucleotide binding
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0004812,GO,aminoacyl-tRNA ligase activity
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0004828,GO,serine-tRNA ligase activity
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0005524,GO,ATP binding
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0005737,GO,cytoplasm
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0006418,GO,tRNA aminoacylation for protein translation
+Thupl.29382119s0003,29382119_1207442,29382119,A,Thupl.29382119s0003.1.v3.1,Transcript,synonymous_variant,271,147,49,P,ccG/ccA,GO:0006434,GO,seryl-tRNA aminoacylation
+Thupl.29382152s0001,29382152_552459,29382152,T,Thupl.29382152s0001.1.v3.1,Transcript,synonymous_variant,2772,789,263,D,gaC/gaT,GO:0043531,GO,ADP binding
+Thupl.29382182s0001,29382182_3731,29382182,T,Thupl.29382182s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0000287,GO,magnesium ion binding
+Thupl.29382182s0001,29382182_3731,29382182,T,Thupl.29382182s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0010333,GO,terpene synthase activity
+Thupl.29382182s0001,29382182_3731,29382182,T,Thupl.29382182s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016829,GO,lyase activity
+Thupl.29382198s0004,29382198_238897,29382198,T,Thupl.29382198s0004.1.v3.1,Transcript,synonymous_variant,81,36,12,S,tcA/tcT,GO:0003690,GO,double-stranded DNA binding
+Thupl.29382198s0004,29382198_238897,29382198,T,Thupl.29382198s0004.1.v3.1,Transcript,synonymous_variant,81,36,12,S,tcA/tcT,GO:0006355,GO,"regulation of transcription, DNA-dependent"
+Thupl.29382217s0001,29382217_8014,29382217,A,Thupl.29382217s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0016491,GO,oxidoreductase activity
+Thupl.29382217s0001,29382217_8014,29382217,A,Thupl.29382217s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0055114,GO,oxidation-reduction process
+Thupl.29382227s0010,29382227_662769,29382227,T,Thupl.29382227s0010.1.v3.1,Transcript,downstream_gene_variant,NA,NA,NA,NA,NA,GO:0005515,GO,protein binding
+Thupl.29382337s0001,29382337_70717,29382337,T,Thupl.29382337s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005743,GO,mitochondrial inner membrane
+Thupl.29382337s0001,29382337_70717,29382337,T,Thupl.29382337s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006850,GO,mitochondrial pyruvate transport
+Thupl.29382378s0002,29382378_426448,29382378,T,Thupl.29382378s0002.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0005525,GO,GTP binding
+Thupl.29382407s0001,29382407_576317,29382407,A,Thupl.29382407s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0004518,GO,nuclease activity
+Thupl.29382407s0001,29382407_576317,29382407,A,Thupl.29382407s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006281,GO,DNA repair
+Thupl.29382461s0001,29382461_3992,29382461,A,Thupl.29382461s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0004185,GO,serine-type carboxypeptidase activity
+Thupl.29382461s0001,29382461_3992,29382461,A,Thupl.29382461s0001.1.v3.1,Transcript,intron_variant,NA,NA,NA,NA,NA,GO:0006508,GO,proteolysis
+Thupl.29382473s0004,29382473_1209287,29382473,A,Thupl.29382473s0004.1.v3.1,Transcript,synonymous_variant,2014,1902,634,N,aaC/aaT,GO:0005524,GO,ATP binding
+Thupl.29382473s0004,29382473_1209287,29382473,A,Thupl.29382473s0004.1.v3.1,Transcript,synonymous_variant,2014,1902,634,N,aaC/aaT,GO:0006457,GO,protein folding
+Thupl.29382473s0004,29382473_1209287,29382473,A,Thupl.29382473s0004.1.v3.1,Transcript,synonymous_variant,2014,1902,634,N,aaC/aaT,GO:0006950,GO,response to stress
+Thupl.29382473s0004,29382473_1209287,29382473,A,Thupl.29382473s0004.1.v3.1,Transcript,synonymous_variant,2014,1902,634,N,aaC/aaT,GO:0051082,GO,unfolded protein binding
