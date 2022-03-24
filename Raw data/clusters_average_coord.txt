@@ -1,4 +1,0 @@
-Cluster	Latitude	Longitude
-Central	49.42346154	-123.9420762
-Northern_Coastal	50.79638961	-127.7266726
-Southern_Interior	47.57033333	-121.89
