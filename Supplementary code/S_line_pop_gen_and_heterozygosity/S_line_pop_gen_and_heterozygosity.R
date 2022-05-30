@@ -20,11 +20,12 @@ library(ggpubr)
 library(rstatix)
 library(tidyverse)
 
-source("publication_theme.r")
+source("../../../../../../r_scripts/publication_theme.r")
 
 ### Loading manually corrected data and chi-squared analysis ###########################
 
 all_snp_ids <- read.table("final_snp_ids.txt")
+# neg_FIS_snps <- read.table("negative_FIS_SNPs.txt")
 
 #Line 1##################################################################################################################
 
@@ -32,13 +33,13 @@ Line_1_1_corrected <- read.csv("Line_1_1_corrected_manually.csv", check.names = 
 # Line_1_4_corrected <- read.csv("Line_1_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_1_1_het_F <- Line_1_1_corrected %>% rownames_to_column() %>% 
-  filter(`1_1-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1_1-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 # Line_1_4_het_F <- Line_1_4_corrected %>% rownames_to_column() %>% 
-#   filter(`1_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+#   filter(`1_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_1_1_het_S4 <- Line_1_1_corrected %>% rownames_to_column() %>% 
-  filter(`111-221-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`111-221-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 
 ##Line 6#################################################################################################################
@@ -46,16 +47,16 @@ Line_6_1_corrected <- read.csv("Line_6_1_corrected_manually.csv", check.names = 
 Line_6_4_corrected <- read.csv("Line_6_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_6_1_het_F <- Line_6_1_corrected %>% rownames_to_column() %>% 
-  filter(`6_1-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`6_1-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_6_4_het_F <- Line_6_4_corrected %>% rownames_to_column() %>% 
-  filter(`6_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`6_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_6_1_het_S4 <- Line_6_1_corrected %>% rownames_to_column() %>% 
-  filter(`611-111-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`611-111-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_6_4_het_S4 <- Line_6_4_corrected %>% rownames_to_column() %>% 
-  filter(`646-454-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`646-454-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 7##################################################################################################################
 
@@ -63,29 +64,29 @@ Line_7_2_corrected <- read.csv("Line_7_2_corrected_manually.csv", check.names = 
 Line_7_4_corrected <- read.csv("Line_7_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_7_2_het_F <- Line_7_2_corrected %>% rownames_to_column() %>% 
-  filter(`7_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`7_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_7_4_het_F <- Line_7_4_corrected %>% rownames_to_column() %>% 
-  filter(`7_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`7_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_7_4_het_S4 <- Line_7_4_corrected %>% rownames_to_column() %>% 
-  filter(`745-444-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`745-444-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 8##################################################################################################################
 Line_8_2_corrected <- read.csv("Line_8_2_corrected_manually.csv", check.names = F, row.names = 1)
 Line_8_4_corrected <- read.csv("Line_8_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_8_2_het_F <- Line_8_2_corrected %>% rownames_to_column() %>% 
-  filter(`8_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`8_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_8_4_het_F <- Line_8_4_corrected %>% rownames_to_column() %>% 
-  filter(`8_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`8_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_8_2_het_S4 <- Line_8_2_corrected %>% rownames_to_column() %>% 
-  filter(`821-111-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`821-111-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_8_4_het_S4 <- Line_8_4_corrected %>% rownames_to_column() %>% 
-  filter(`845-444-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`845-444-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 ##Line 10#################################################################################################################
 
@@ -93,13 +94,13 @@ Line_10_2_corrected <- read.csv("Line_10_2_corrected_manually.csv", check.names 
 Line_10_5_corrected <- read.csv("Line_10_5_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_10_2_het_F <- Line_10_2_corrected %>% rownames_to_column() %>% 
-  filter(`10_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`10_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_10_5_het_F <- Line_10_5_corrected %>% rownames_to_column() %>% 
-  filter(`10_5-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`10_5-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_10_5_het_S4 <- Line_10_5_corrected %>% rownames_to_column() %>% 
-  filter(`1056-454-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1056-454-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 13##################################################################################################################
 
@@ -107,13 +108,13 @@ Line_13_3_corrected <- read.csv("Line_13_3_corrected_manually.csv", check.names 
 Line_13_4_corrected <- read.csv("Line_13_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_13_3_het_F <- Line_13_3_corrected %>% rownames_to_column() %>% 
-  filter(`13_3-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`13_3-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_13_4_het_F <- Line_13_4_corrected %>% rownames_to_column() %>% 
-  filter(`13_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`13_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_13_4_het_S4 <- Line_13_4_corrected %>% rownames_to_column() %>% 
-  filter(`1345-544-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1345-544-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 16##################################################################################################################
 
@@ -121,13 +122,13 @@ Line_16_1_corrected <- read.csv("Line_16_1_corrected_manually.csv", check.names 
 Line_16_5_corrected <- read.csv("Line_16_5_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_16_1_het_F <- Line_16_1_corrected %>% rownames_to_column() %>% 
-  filter(`16_1-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`16_1-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_16_5_het_F <- Line_16_5_corrected %>% rownames_to_column() %>% 
-  filter(`16_5-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`16_5-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_16_1_het_S4 <- Line_16_1_corrected %>% rownames_to_column() %>% 
-  filter(`1611-211-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1611-211-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 17##################################################################################################################
 
@@ -135,16 +136,16 @@ Line_17_2_corrected <- read.csv("Line_17_2_corrected_manually.csv", check.names 
 Line_17_5_corrected <- read.csv("Line_17_5_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_17_2_het_F <- Line_17_2_corrected %>% rownames_to_column() %>% 
-  filter(`17_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`17_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_17_5_het_F <- Line_17_5_corrected %>% rownames_to_column() %>% 
-  filter(`17_5-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`17_5-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_17_2_het_S4 <- Line_17_2_corrected %>% rownames_to_column() %>% 
-  filter(`1721-111-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1721-111-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_17_5_het_S4 <- Line_17_5_corrected %>% rownames_to_column() %>% 
-  filter(`1755-545-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1755-545-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 19##################################################################################################################
 
@@ -152,13 +153,13 @@ Line_19_2_corrected <- read.csv("Line_19_2_corrected_manually.csv", check.names 
 Line_19_5_corrected <- read.csv("Line_19_5_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_19_2_het_F <- Line_19_2_corrected %>% rownames_to_column() %>% 
-  filter(`19_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`19_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_19_5_het_F <- Line_19_5_corrected %>% rownames_to_column() %>% 
-  filter(`19_5-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`19_5-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_19_5_het_S4 <- Line_19_5_corrected %>% rownames_to_column() %>% 
-  filter(`1955-544-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`1955-544-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 20##################################################################################################################
 
@@ -166,16 +167,16 @@ Line_20_1_corrected <- read.csv("Line_20_1_corrected_manually.csv", check.names 
 Line_20_4_corrected <- read.csv("Line_20_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_20_1_het_F <- Line_20_1_corrected %>% rownames_to_column() %>% 
-  filter(`20_1-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`20_1-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_20_4_het_F <- Line_20_4_corrected %>% rownames_to_column() %>% 
-  filter(`20_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`20_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_20_1_het_S4 <- Line_20_1_corrected %>% rownames_to_column() %>% 
-  filter(`2013-131-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2013-131-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_20_4_het_S4 <- Line_20_4_corrected %>% rownames_to_column() %>% 
-  filter(`2045-544-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2045-544-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 21##################################################################################################################
 
@@ -183,16 +184,16 @@ Line_21_2_corrected <- read.csv("Line_21_2_corrected_manually.csv", check.names 
 Line_21_6_corrected <- read.csv("Line_21_6_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_21_2_het_F <- Line_21_2_corrected %>% rownames_to_column() %>% 
-  filter(`21_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`21_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_21_6_het_F <- Line_21_6_corrected %>% rownames_to_column() %>% 
-  filter(`21_6-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`21_6-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_21_2_het_S4 <- Line_21_2_corrected %>% rownames_to_column() %>% 
-  filter(`2121-111-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2121-111-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_21_6_het_S4 <- Line_21_6_corrected %>% rownames_to_column() %>% 
-  filter(`2165-444-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2165-444-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 ##Line 23#################################################################################################################
 
@@ -200,16 +201,16 @@ Line_23_2_corrected <- read.csv("Line_23_2_corrected_manually.csv", check.names 
 Line_23_4_corrected <- read.csv("Line_23_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_23_2_het_F <- Line_23_2_corrected %>% rownames_to_column() %>% 
-  filter(`23_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`23_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_23_4_het_F <- Line_23_4_corrected %>% rownames_to_column() %>% 
-  filter(`23_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`23_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_23_2_het_S4 <- Line_23_2_corrected %>% rownames_to_column() %>% 
-  filter(`2323-211-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2323-211-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_23_4_het_S4 <- Line_23_4_corrected %>% rownames_to_column() %>% 
-  filter(`2344-464-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2344-464-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 26##################################################################################################################
 
@@ -217,20 +218,20 @@ Line_26_1_corrected <- read.csv("Line_26_1_corrected_manually.csv", check.names 
 Line_26_4_corrected <- read.csv("Line_26_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_26_1_het_F <- Line_26_1_corrected %>% rownames_to_column() %>% 
-  filter(`26_1-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`26_1-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_26_4_het_F <- Line_26_4_corrected %>% rownames_to_column() %>% 
-  filter(`26_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`26_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_26_1_het_S4 <- Line_26_1_corrected %>% rownames_to_column() %>% 
-  filter(`2612-121-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2612-121-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 27##################################################################################################################
 
 Line_27_2_corrected <- read.csv("Line_27_2_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_27_2_het_F <- Line_27_2_corrected %>% rownames_to_column() %>% 
-  filter(`27_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`27_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 #Line 29##################################################################################################################
 
@@ -238,16 +239,16 @@ Line_29_2_corrected <- read.csv("Line_29_2_corrected_manually.csv", check.names 
 Line_29_4_corrected <- read.csv("Line_29_4_corrected_manually.csv", check.names = F, row.names = 1)
 
 Line_29_2_het_F <- Line_29_2_corrected %>% rownames_to_column() %>% 
-  filter(`29_2-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`29_2-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_29_4_het_F <- Line_29_4_corrected %>% rownames_to_column() %>% 
-  filter(`29_4-F` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`29_4-F` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_29_2_het_S4 <- Line_29_2_corrected %>% rownames_to_column() %>% 
-  filter(`2923-121-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2923-121-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 Line_29_4_het_S4 <- Line_29_4_corrected %>% rownames_to_column() %>% 
-  filter(`2944-565-S4` == 1) %>% filter(rowname %in% all_snp_ids$V1) %>% column_to_rownames()
+  filter(`2944-565-S4` == 1) %>% filter(!(rowname %in% all_snp_ids$V1)) %>% column_to_rownames()
 
 
 # ### Fixation plots #################
@@ -2581,22 +2582,22 @@ gt_all_S4 <- data.frame(SNP = gt_all$SNP, select_at(gt_all, vars(ends_with("S4")
 gt_all_S5 <- data.frame(SNP = gt_all$SNP, select_at(gt_all, vars(ends_with("S5"))), check.names = F)
 
 F_lines_012_matrix <- gt_all_F %>% 
-  filter(!(SNP %in% final_snps$V1)) 
+  filter(SNP %in% all_snp_ids$V1)
 
 S1_lines_012_matrix <- gt_all_S1 %>% 
-  filter(!(SNP %in% final_snps$V1)) 
+  filter(SNP %in% all_snp_ids$V1) 
   
 S2_lines_012_matrix <- gt_all_S2 %>% 
-  filter(!(SNP %in% final_snps$V1)) 
+  filter(SNP %in% all_snp_ids$V1) 
   
 S3_lines_012_matrix <- gt_all_S3 %>% 
-  filter(!(SNP %in% final_snps$V1)) 
+  filter(SNP %in% all_snp_ids$V1)
   
 S4_lines_012_matrix <- gt_all_S4 %>% 
-  filter(!(SNP %in% final_snps$V1)) 
+  filter(SNP %in% all_snp_ids$V1)
   
 S5_lines_012_matrix <- gt_all_S5 %>% 
-  filter(!(SNP %in% final_snps$V1)) 
+  filter(SNP %in% all_snp_ids$V1) 
   
 all_lines_012 <- merge(F_lines_012_matrix, S1_lines_012_matrix, by = "SNP")
 all_lines_012 <- merge(all_lines_012, S2_lines_012_matrix, by = "SNP")
@@ -2606,6 +2607,7 @@ all_lines_012 <- merge(all_lines_012, S5_lines_012_matrix, by = "SNP")
 
 # write.table(all_lines_012, "all_lines_012_matrix.txt", row.names = F, col.names = T, quote = F)
 
+
 # write.table(gt_all_F, "FS_lines_012.txt", row.names = F, quote = F)
 # write.table(gt_all_S1, "S1_lines_012.txt", row.names = F, quote = F)
 # write.table(gt_all_S2, "S2_lines_012.txt", row.names = F, quote = F)
@@ -2614,14 +2616,56 @@ all_lines_012 <- merge(all_lines_012, S5_lines_012_matrix, by = "SNP")
 # write.table(gt_all_S5, "S5_lines_012.txt", row.names = F, quote = F)
 
 ### Corrected allele matrices for pop gen, heterozygosity #####
-FS_lines_allele_matrix <- t(read.csv("FS_lines_allele_matrix.csv", check.names = F, row.names = 1))
-S1_lines_allele_matrix <- t(read.csv("S1_lines_allele_matrix.csv", check.names = F, row.names = 1))
-S2_lines_allele_matrix <- t(read.csv("S2_lines_allele_matrix.csv", check.names = F, row.names = 1))
-S3_lines_allele_matrix <- t(read.csv("S3_lines_allele_matrix.csv", check.names = F, row.names = 1))
-S4_lines_allele_matrix <- t(read.csv("S4_lines_allele_matrix.csv", check.names = F, row.names = 1))
-S5_lines_allele_matrix <- t(read.csv("S5_lines_allele_matrix.csv", check.names = F, row.names = 1))
+FS_lines_allele_matrix <- read.csv("FS_lines_allele_matrix.csv", check.names = F, row.names = 1)
+S1_lines_allele_matrix <- read.csv("S1_lines_allele_matrix.csv", check.names = F, row.names = 1)
+S2_lines_allele_matrix <- read.csv("S2_lines_allele_matrix.csv", check.names = F, row.names = 1)
+S3_lines_allele_matrix <- read.csv("S3_lines_allele_matrix.csv", check.names = F, row.names = 1)
+S4_lines_allele_matrix <- read.csv("S4_lines_allele_matrix.csv", check.names = F, row.names = 1)
+S5_lines_allele_matrix <- read.csv("S5_lines_allele_matrix.csv", check.names = F, row.names = 1)
+
+
+### Filter for Fis
+# FS_lines_allele_matrix_neg_fis_filter <- FS_lines_allele_matrix %>% 
+#   rownames_to_column() %>% 
+#   filter(!(rowname %in% neg_FIS_snps$V1)) %>% 
+#   column_to_rownames()
+# 
+# S1_lines_allele_matrix_neg_fis_filter <- S1_lines_allele_matrix %>% 
+#   rownames_to_column() %>% 
+#   filter(!(rowname %in% neg_FIS_snps$V1)) %>% 
+#   column_to_rownames()
+# 
+# S2_lines_allele_matrix_neg_fis_filter <- S2_lines_allele_matrix %>% 
+#   rownames_to_column() %>% 
+#   filter(!(rowname %in% neg_FIS_snps$V1)) %>% 
+#   column_to_rownames()
+# 
+# S3_lines_allele_matrix_neg_fis_filter <- S3_lines_allele_matrix %>% 
+#   rownames_to_column() %>% 
+#   filter(!(rowname %in% neg_FIS_snps$V1)) %>% 
+#   column_to_rownames()
+# 
+# S4_lines_allele_matrix_neg_fis_filter <- S4_lines_allele_matrix %>% 
+#   rownames_to_column() %>% 
+#   filter(!(rowname %in% neg_FIS_snps$V1)) %>% 
+#   column_to_rownames()
+# 
+# S5_lines_allele_matrix_neg_fis_filter <- S5_lines_allele_matrix %>% 
+#   rownames_to_column() %>% 
+#   filter(!(rowname %in% neg_FIS_snps$V1)) %>% 
+#   column_to_rownames()
+# 
+# FS_lines_allele_matrix_neg_fis_filter_t <- t(FS_lines_allele_matrix_neg_fis_filter)
+# S1_lines_allele_matrix_neg_fis_filter_t <- t(S1_lines_allele_matrix_neg_fis_filter)
+# S2_lines_allele_matrix_neg_fis_filter_t <- t(S2_lines_allele_matrix_neg_fis_filter)
+# S3_lines_allele_matrix_neg_fis_filter_t <- t(S3_lines_allele_matrix_neg_fis_filter)
+# S4_lines_allele_matrix_neg_fis_filter_t <- t(S4_lines_allele_matrix_neg_fis_filter)
+# S5_lines_allele_matrix_neg_fis_filter_t <- t(S5_lines_allele_matrix_neg_fis_filter)
 
 all_allele_matrix <- rbind(FS_lines_allele_matrix, S1_lines_allele_matrix, S2_lines_allele_matrix, S3_lines_allele_matrix, S4_lines_allele_matrix, S5_lines_allele_matrix)
+# all_allele_matrix_neg_fis_filter <- rbind(FS_lines_allele_matrix_neg_fis_filter_t, S1_lines_allele_matrix_neg_fis_filter_t, 
+#                                               S2_lines_allele_matrix_neg_fis_filter_t, S3_lines_allele_matrix_neg_fis_filter_t, 
+#                                               S4_lines_allele_matrix_neg_fis_filter_t, S5_lines_allele_matrix_neg_fis_filter_t)
 
 # Convert to genind
 FS_S5_genind <- df2genind(all_allele_matrix, sep = "/", NA.char = "NA")
@@ -2662,8 +2706,8 @@ expectations_halving <- melted_generation_FS_S5_hobs %>%
 # 
 melted_expectations_halving <- melt(expectations_halving)
 
-# write.table(melted_expectations_halving, "melted_hexp_halving_all_snps.txt", quote = F, row.names = F)
-# write.table(melted_generation_FS_S5_hobs, "melted_generation_FS_S5_hobs_all_snps.txt", quote = F, row.names = F)
+write.table(melted_expectations_halving, "melted_hexp_halving_all_snps.txt", quote = F, row.names = F)
+write.table(melted_generation_FS_S5_hobs, "melted_generation_FS_S5_hobs_all_snps.txt", quote = F, row.names = F)
 
 # Read in simplified hets with no expected het for FS - combined outside of R due to memory issues
 generation_heterozygosities_obs_exp_halving <- read.table("observed_expected_het_all_snps.txt", header = F)
@@ -2777,7 +2821,7 @@ summary(S1$Observed)
 summary(S1$Expected)
 
 wilcox.test(S1$Observed, S1$Expected, paired = T, alternative = "less")
-mood.test(S1$Obs, S1$Exp, paired = T, alternative = "greater")
+mood.test(S1$Obs, S1$Exp, paired = T, alternative = "greater",)
 
 S2 <- het_two_cols %>% 
   filter(Generation == "S2")
@@ -2826,7 +2870,7 @@ FS_het %>%
 bxp <- ggpaired(FS_het, x = "V4", y = "V3", 
                 order = c("Observed", "Expected"),
                 ylab = "Het", xlab = "group")
-bxp
+# bxp
 
 FS_test <- FS_het %>% 
   sign_test(V3 ~ V4) %>% 
@@ -2835,7 +2879,7 @@ FS_test
 
 #S1
 S1_het <- generation_heterozygosities_obs_exp_halving %>% 
-  filter(V2 =="S1", V4 == "Observed")
+  filter(V2 =="S1")#, V4 == "Observed")
 
 S1_het %>% 
   group_by(V4) %>%
@@ -2846,10 +2890,18 @@ bxp <- ggpaired(S1_het, x = "V4", y = "V3",
                 ylab = "Het", xlab = "group")
 # bxp
 
-S1_test <- S1_het %>% 
-  sign_test(V3 ~ 1, mu = 0.143, alternative = "less") %>% 
+S1_test <- S1_het %>%
+  pairwise_sign_test(V3 ~ V4, detailed = T, ref.group = "Observed", alternative = "less") %>% #1, mu = 0.143) %>%
   add_significance()
 S1_test
+
+
+het_two_cols %>% 
+  filter(Generation == "S1", !(Observed == Expected)) %>% 
+  count(Observed > Expected)
+  
+p <- dbinom(0:9517, 22227, 0.5)
+sum(p.adjust(p = p, method = "holm"))
 
 #S2
 S2_het <- generation_heterozygosities_obs_exp_halving %>% 
@@ -2862,16 +2914,16 @@ S2_het %>%
 bxp <- ggpaired(S2_het, x = "V4", y = "V3", 
                 order = c("Observed", "Expected"),
                 ylab = "Het", xlab = "group")
-bxp
+# bxp
 
 S2_test <- S2_het %>% 
-  sign_test(V3 ~ 1, mu = 0.0714) %>% 
+  pairwise_sign_test(V3 ~ V4, detailed = T, ref.group = "Observed", alternative = "less") %>% #1, mu = 0.0714) %>% 
   add_significance()
 S2_test
 
 #S3
 S3_het <- generation_heterozygosities_obs_exp_halving %>% 
-  filter(V2 =="S3", V4 == "Observed")
+  filter(V2 =="S3")#, V4 == "Observed")
 
 S3_het %>% 
   group_by(V4) %>%
@@ -2883,13 +2935,13 @@ bxp <- ggpaired(S3_het, x = "V4", y = "V3",
 # bxp
 
 S3_test <- S3_het %>% 
-  sign_test(V3 ~ 1, mu = 0.0357) %>% 
+  pairwise_sign_test(V3 ~ V4, ref.group = "Observed", alternative = "less", detailed = T) %>% #1, mu = 0.0357) %>% 
   add_significance()
 S3_test
 
 #S4
 S4_het <- generation_heterozygosities_obs_exp_halving %>% 
-  filter(V2 =="S4", V4 == "Observed")
+  filter(V2 =="S4")#, V4 == "Observed")
 
 S4_het %>% 
   group_by(V4) %>%
@@ -2900,14 +2952,14 @@ bxp <- ggpaired(S4_het, x = "V4", y = "V3",
                 ylab = "Het", xlab = "group")
 # bxp
 
-S4_test <- S4_het %>% 
-  sign_test(V3 ~ 1, mu = 0.0179) %>% 
+S4_test <- S4_het %>%  
+  pairwise_sign_test(V3 ~ V4, ref.group = "Observed", alternative = "less", detailed = T) %>% #,1, mu = 0.0179) %>% 
   add_significance()
 S4_test
 
 #S5
 S5_het <- generation_heterozygosities_obs_exp_halving %>% 
-  filter(V2 =="S5", V4 == "Observed")
+  filter(V2 =="S5")#, V4 == "Observed")
 
 S5_het %>% 
   group_by(V4) %>%
@@ -2919,7 +2971,7 @@ bxp <- ggpaired(S5_het, x = "V4", y = "V3",
 # bxp
 
 S5_test <- S5_het %>% 
-  sign_test(V3 ~ 1, mu = 0.00893) %>% 
+  pairwise_sign_test(V3 ~ V4, ref.group = "Observed", alternative = "less", detailed = T) %>% 
   add_significance()
 S5_test
 
@@ -5089,7 +5141,7 @@ S4_fate_table_props_for_chisq <- S4_fate_table_props %>%
   mutate(p.adj.BH = p.adjust(p.value, "BH"), p.adj.bonf = p.adjust(p.value, "bonferroni"), p.adj.holm = p.adjust(p.value, "holm"))
 
 
-# write.csv(S4_fate_table_props_for_chisq, "S4_fate_table_chisq_analysis_all_snps_min_10.csv", row.names = F)
+write.csv(S4_fate_table_props_for_chisq, "S4_fate_table_chisq_analysis_neg_fis_filtered_snps_min_10.csv", row.names = F)
 
 # outlier results
 S4_fate_table_outlier <- S4_fate_table_props_for_chisq %>% 
