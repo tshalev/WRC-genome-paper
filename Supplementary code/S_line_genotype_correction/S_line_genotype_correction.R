@@ -620,7 +620,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_7 <- as.matrix(alleles)
 
 t_g.mat_Line_7 <- t(g.mat_Line_7)
-t_g.mat_Line_7 <- cbind(t_g.mat_Line_7, `721-21-S3` = rep(NA, 27594))
+t_g.mat_Line_7 <- cbind(t_g.mat_Line_7, `721-21-S3` = rep(NA, 51638))
 col.order <- c("7_1-F", "712-S1","712-111-S4",
                "7_2-F", "721-S1", "721-2-S2", "721-21-S3","721-211-S4",
                "7_4-F", "745-S1", "745-4-S2", "745-44-S3", "745-444-S4")
@@ -878,7 +878,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_10 <- as.matrix(alleles)
 
 t_g.mat_Line_10 <- t(g.mat_Line_10)
-t_g.mat_Line_10 <- cbind(t_g.mat_Line_10, `1022-11-S3` = rep(NA, 27594), `1056-45-S3` = rep(NA, 27594))
+t_g.mat_Line_10 <- cbind(t_g.mat_Line_10, `1022-11-S3` = rep(NA, 51638), `1056-45-S3` = rep(NA, 51638))
 
 col.order <- c("10_1-F", "1011-S1", "1011-121-S4",
                "10_2-F", "1022-S1", "1022-1-S2", "1022-11-S3", "1022-113-S4", "1022-113-S5",
@@ -1022,7 +1022,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_13 <- as.matrix(alleles)
 
 t_g.mat_Line_13 <- t(g.mat_Line_13)
-t_g.mat_Line_13 <- cbind(t_g.mat_Line_13, `1332-11-S3` = rep(NA, 27594))
+t_g.mat_Line_13 <- cbind(t_g.mat_Line_13, `1332-11-S3` = rep(NA, 51638))
 
 col.order <- c("13_2-F", "1323-S1", "1323-211-S4", 
                "13_3-F", "1332-S1", "1332-1-S2", "1332-11-S3", "1332-111-S4",
@@ -1154,7 +1154,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_16 <- as.matrix(alleles)
 
 t_g.mat_Line_16 <- t(g.mat_Line_16)
-t_g.mat_Line_16 <- cbind(t_g.mat_Line_16, `1654-45-S3` = rep(NA, 27594))
+t_g.mat_Line_16 <- cbind(t_g.mat_Line_16, `1654-45-S3` = rep(NA, 51638))
 
 col.order <- c("16_1-F", "1611-S1", "1611-2-S2", "1611-21-S3", "1611-211-S4", 
                "16_2-F", "1621-S1", "1621-221-S4",
@@ -1480,7 +1480,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_19 <- as.matrix(alleles)
 
 t_g.mat_Line_19 <- t(g.mat_Line_19)
-t_g.mat_Line_19 <- cbind(t_g.mat_Line_19, `1922-11-S3` = rep(NA, 27594))
+t_g.mat_Line_19 <- cbind(t_g.mat_Line_19, `1922-11-S3` = rep(NA, 51638))
 
 col.order <- c("19_1-F", "1912-S1", "1912-131-S4", 
                "19_2-F", "1922-S1", "1922-1-S2", "1922-11-S3", "1922-111-S4",
@@ -2103,7 +2103,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_26 <- as.matrix(alleles)
 
 t_g.mat_Line_26 <- t(g.mat_Line_26)
-t_g.mat_Line_26 <- cbind(t_g.mat_Line_26, `2612-12-S3` = rep(NA, 27594))
+t_g.mat_Line_26 <- cbind(t_g.mat_Line_26, `2612-12-S3` = rep(NA, 51638))
 
 col.order <- c("26_4-F", "2645-S1", "2645-4-S2", "2645-46-S3", "2645-464-S4",
                "26_1-F", "2612-S1", "2612-1-S2", "2612-12-S3",  "2612-121-S4", 
@@ -2240,7 +2240,7 @@ colnames(alleles) <- t_snps
 g.mat_Line_27 <- as.matrix(alleles)
 
 t_g.mat_Line_27 <- t(g.mat_Line_27)
-t_g.mat_Line_27 <- cbind(t_g.mat_Line_27, `2721-12-S3` = rep(NA, 27594))
+t_g.mat_Line_27 <- cbind(t_g.mat_Line_27, `2721-12-S3` = rep(NA, 51638))
 
 col.order <- c("27_1-F", "2712-S1", "2712-211-S4", 
                "27_2-F", "2721-S1", "2721-1-S2", "2721-12-S3", "2721-121-S4",
@@ -2477,31 +2477,31 @@ pheatmap(inbred_heterozygotes, cluster_rows = F, cluster_cols = F, color = my_co
 dev.off()
 
 ### Write files #####
-write.csv(Line_1_1_corrected, "Line_1_1_corrected.csv")
-write.csv(Line_6_1_corrected, "Line_6_1_corrected.csv")
-write.csv(Line_6_4_corrected, "Line_6_4_corrected.csv")
-write.csv(Line_7_2_corrected, "Line_7_2_corrected.csv")
-write.csv(Line_7_4_corrected, "Line_7_4_corrected.csv")
-write.csv(Line_8_2_corrected, "Line_8_2_corrected.csv")
-write.csv(Line_8_4_corrected, "Line_8_4_corrected.csv")
-write.csv(Line_10_2_corrected, "Line_10_2_corrected.csv")
-write.csv(Line_10_5_corrected, "Line_10_5_corrected.csv")
-write.csv(Line_13_3_corrected, "Line_13_3_corrected.csv")
-write.csv(Line_13_4_corrected, "Line_13_4_corrected.csv")
-write.csv(Line_16_1_corrected, "Line_16_1_corrected.csv")
-write.csv(Line_16_5_corrected, "Line_16_5_corrected.csv")
-write.csv(Line_17_2_corrected, "Line_17_2_corrected.csv")
-write.csv(Line_17_5_corrected, "Line_17_5_corrected.csv")
-write.csv(Line_19_2_corrected, "Line_19_2_corrected.csv")
-write.csv(Line_19_5_corrected, "Line_19_5_corrected.csv")
-write.csv(Line_20_1_corrected, "Line_20_1_corrected.csv")
-write.csv(Line_20_4_corrected, "Line_20_4_corrected.csv")
-write.csv(Line_21_6_corrected, "Line_21_6_corrected.csv")
-write.csv(Line_21_2_corrected, "Line_21_2_corrected.csv")
-write.csv(Line_23_2_corrected, "Line_23_2_corrected.csv")
-write.csv(Line_23_4_corrected, "Line_23_4_corrected.csv")
-write.csv(Line_26_1_corrected, "Line_26_1_corrected.csv")
-write.csv(Line_26_4_corrected, "Line_26_4_corrected.csv")
-write.csv(Line_27_2_corrected, "Line_27_2_corrected.csv")
-write.csv(Line_29_2_corrected, "Line_29_2_corrected.csv")
-write.csv(Line_29_4_corrected, "Line_29_4_corrected.csv")
+# write.csv(Line_1_1_corrected, "Line_1_1_corrected.csv")
+# write.csv(Line_6_1_corrected, "Line_6_1_corrected.csv")
+# write.csv(Line_6_4_corrected, "Line_6_4_corrected.csv")
+# write.csv(Line_7_2_corrected, "Line_7_2_corrected.csv")
+# write.csv(Line_7_4_corrected, "Line_7_4_corrected.csv")
+# write.csv(Line_8_2_corrected, "Line_8_2_corrected.csv")
+# write.csv(Line_8_4_corrected, "Line_8_4_corrected.csv")
+# write.csv(Line_10_2_corrected, "Line_10_2_corrected.csv")
+# write.csv(Line_10_5_corrected, "Line_10_5_corrected.csv")
+# write.csv(Line_13_3_corrected, "Line_13_3_corrected.csv")
+# write.csv(Line_13_4_corrected, "Line_13_4_corrected.csv")
+# write.csv(Line_16_1_corrected, "Line_16_1_corrected.csv")
+# write.csv(Line_16_5_corrected, "Line_16_5_corrected.csv")
+# write.csv(Line_17_2_corrected, "Line_17_2_corrected.csv")
+# write.csv(Line_17_5_corrected, "Line_17_5_corrected.csv")
+# write.csv(Line_19_2_corrected, "Line_19_2_corrected.csv")
+# write.csv(Line_19_5_corrected, "Line_19_5_corrected.csv")
+# write.csv(Line_20_1_corrected, "Line_20_1_corrected.csv")
+# write.csv(Line_20_4_corrected, "Line_20_4_corrected.csv")
+# write.csv(Line_21_6_corrected, "Line_21_6_corrected.csv")
+# write.csv(Line_21_2_corrected, "Line_21_2_corrected.csv")
+# write.csv(Line_23_2_corrected, "Line_23_2_corrected.csv")
+# write.csv(Line_23_4_corrected, "Line_23_4_corrected.csv")
+# write.csv(Line_26_1_corrected, "Line_26_1_corrected.csv")
+# write.csv(Line_26_4_corrected, "Line_26_4_corrected.csv")
+# write.csv(Line_27_2_corrected, "Line_27_2_corrected.csv")
+# write.csv(Line_29_2_corrected, "Line_29_2_corrected.csv")
+# write.csv(Line_29_4_corrected, "Line_29_4_corrected.csv")
